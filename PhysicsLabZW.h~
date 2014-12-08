@@ -1,0 +1,29 @@
+#ifndef _PHYSICSLAB_H
+#define _PHYSICSLAB_H
+
+// CVR
+#include <cvrKernel/CVRPlugin.h>
+#include <cvrKernel/PluginHelper.h>
+#include <cvrKernel/ComController.h>
+#include <cvrMenu/MenuSystem.h>
+#include <cvrMenu/SubMenu.h>
+#include <cvrMenu/MenuButton.h>
+
+// OSG
+#include <osg/Group>
+#include <osg/Vec3>
+
+class PhysicsLabZW : public cvr::CVRPlugin, public cvr::MenuCallback
+{
+  protected:
+    cvr::SubMenu * _mainMenu, * _loadMenu;
+    cvr::MenuButton * _removeButton;
+
+  public:
+    PhysicsLabZW();
+    virtual ~PhysicsLabZW();
+    void menuCallback(cvr::MenuItem*);
+    bool init();
+    void preFrame();
+};
+#endif
