@@ -22,6 +22,10 @@ SET(PLUGIN_HEADERS
 	Engine/Utils.h
 	Engine/AssetDB.h
 
+	Robert/AntiGravityField.h	
+	Robert/NavHandler.h		
+	Robert/BulletHandler.h		
+	Robert/ObjectFactory.h
 )
 
 ADD_LIBRARY(${LIB_NAME}
@@ -46,7 +50,15 @@ ADD_LIBRARY(${LIB_NAME}
 	Engine/Shared.cpp
 	Engine/Utils.cpp
 	Engine/AssetDB.cpp
+
+	Robert/NavHandler.cpp
+	Robert/BulletHandler.cpp
+	Robert/ObjectFactory.cpp
 )
+
+FIND_PACKAGE(Bullet)
+INCLUDE_DIRECTORIES(${BULLET_INCLUDE_DIR})
+TARGET_LINK_LIBRARIES(${LIB_NAME} ${BULLET_LIBRARIES})
 
 INCLUDE_DIRECTORIES(${OSG_INCLUDE_DIR})
 TARGET_LINK_LIBRARIES(${LIB_NAME} ${OSG_LIBRARIES})
