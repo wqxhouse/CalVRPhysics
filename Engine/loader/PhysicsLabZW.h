@@ -54,9 +54,6 @@ private:
     Core *_core;
     osg::ref_ptr<osg::Camera> _mainCamera;
     
-//    static void handleGeometries(const osg::ref_ptr<osg::Group> geoms, Assets *const asset);
-//    static void handleDirLights(DirectionalLightGroup *const dirLightGroup);
-    
     osg::ref_ptr<CustomTrackballManipulator> _trackBallM;
 
 };

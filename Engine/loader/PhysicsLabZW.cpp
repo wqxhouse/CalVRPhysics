@@ -18,15 +18,6 @@
 #include "CustomVCoordFrameCB.h"
 
 CVRPLUGIN(PhysicsLabZW);
-//
-//void PhysicsLabZW::handleGeometries(const osg::ref_ptr<osg::Group> geoms, Assets *const asset)
-//{
-//    asset->addGeometryWithFile("Testing/gi_test.dae");
-//}
-//
-//void PhysicsLabZW::handleDirLights(DirectionalLightGroup *const dirLightGroup)
-//{
-//}
 
 PhysicsLabZW::PhysicsLabZW()
 {
@@ -93,6 +84,7 @@ void PhysicsLabZW::configMenuBoard()
     _mainMenu->setCallback(this);
     cvr::MenuSystem::instance()->addMenuItem(_mainMenu);
 }
+#include "../src/LightGroup.h"
 
 void PhysicsLabZW::configEngineCore()
 {

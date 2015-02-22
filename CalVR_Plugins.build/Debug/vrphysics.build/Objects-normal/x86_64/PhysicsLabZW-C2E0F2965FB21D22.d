@@ -239,4 +239,5 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrConfig/ConfigFileReader.h \
   /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrKernel/SceneObject.h \
   /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrMenu/PopupMenu.h \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/Scene.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/CustomVCoordFrameCB.h
