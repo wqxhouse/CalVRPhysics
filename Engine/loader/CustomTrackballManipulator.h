@@ -24,7 +24,7 @@ public:
     
     virtual bool handleCVREvent(cvr::InteractionEvent * event);
     
-    inline void setUseDefaultProjectionMatirx(bool tf)
+    inline void setUseOSGDefaultProjectionMatrix(bool tf)
     {
         _useDefaultOSGProjection = tf;
     }

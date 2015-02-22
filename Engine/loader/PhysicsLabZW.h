@@ -30,8 +30,7 @@
 class PhysicsLabZW : public cvr::CVRPlugin, public cvr::MenuCallback
 {
 protected:
-    cvr::SubMenu * _mainMenu, * _loadMenu;
-    cvr::MenuButton * _removeButton;
+    cvr::SubMenu *_mainMenu;
     
 public:
     PhysicsLabZW();
@@ -49,12 +48,14 @@ private:
     void loadConfigSettings();
     void configMainCamera();
     void configTrackball();
+    void configMenuBoard();
+    void configEngineCore();
     
     Core *_core;
     osg::ref_ptr<osg::Camera> _mainCamera;
     
-    static void handleGeometries(const osg::ref_ptr<osg::Group> geoms, Assets *const asset);
-    static void handleDirLights(DirectionalLightGroup *const dirLightGroup);
+//    static void handleGeometries(const osg::ref_ptr<osg::Group> geoms, Assets *const asset);
+//    static void handleDirLights(DirectionalLightGroup *const dirLightGroup);
     
     osg::ref_ptr<CustomTrackballManipulator> _trackBallM;
 
