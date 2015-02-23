@@ -147,6 +147,7 @@ vrphysics/fast:
 	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/build
 .PHONY : vrphysics/fast
 
+<<<<<<< HEAD
 Engine/AssetDB.o: Engine/AssetDB.cpp.o
 .PHONY : Engine/AssetDB.o
 
@@ -578,6 +579,823 @@ PhysicsLabZW.s: PhysicsLabZW.cpp.s
 PhysicsLabZW.cpp.s:
 	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/PhysicsLabZW.cpp.s
 .PHONY : PhysicsLabZW.cpp.s
+=======
+Engine/loader/CVRKeyboardHandler.o: Engine/loader/CVRKeyboardHandler.cpp.o
+.PHONY : Engine/loader/CVRKeyboardHandler.o
+
+# target to build an object file
+Engine/loader/CVRKeyboardHandler.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CVRKeyboardHandler.cpp.o
+.PHONY : Engine/loader/CVRKeyboardHandler.cpp.o
+
+Engine/loader/CVRKeyboardHandler.i: Engine/loader/CVRKeyboardHandler.cpp.i
+.PHONY : Engine/loader/CVRKeyboardHandler.i
+
+# target to preprocess a source file
+Engine/loader/CVRKeyboardHandler.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CVRKeyboardHandler.cpp.i
+.PHONY : Engine/loader/CVRKeyboardHandler.cpp.i
+
+Engine/loader/CVRKeyboardHandler.s: Engine/loader/CVRKeyboardHandler.cpp.s
+.PHONY : Engine/loader/CVRKeyboardHandler.s
+
+# target to generate assembly for a file
+Engine/loader/CVRKeyboardHandler.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CVRKeyboardHandler.cpp.s
+.PHONY : Engine/loader/CVRKeyboardHandler.cpp.s
+
+Engine/loader/CustomTrackballManipulator.o: Engine/loader/CustomTrackballManipulator.cpp.o
+.PHONY : Engine/loader/CustomTrackballManipulator.o
+
+# target to build an object file
+Engine/loader/CustomTrackballManipulator.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CustomTrackballManipulator.cpp.o
+.PHONY : Engine/loader/CustomTrackballManipulator.cpp.o
+
+Engine/loader/CustomTrackballManipulator.i: Engine/loader/CustomTrackballManipulator.cpp.i
+.PHONY : Engine/loader/CustomTrackballManipulator.i
+
+# target to preprocess a source file
+Engine/loader/CustomTrackballManipulator.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CustomTrackballManipulator.cpp.i
+.PHONY : Engine/loader/CustomTrackballManipulator.cpp.i
+
+Engine/loader/CustomTrackballManipulator.s: Engine/loader/CustomTrackballManipulator.cpp.s
+.PHONY : Engine/loader/CustomTrackballManipulator.s
+
+# target to generate assembly for a file
+Engine/loader/CustomTrackballManipulator.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CustomTrackballManipulator.cpp.s
+.PHONY : Engine/loader/CustomTrackballManipulator.cpp.s
+
+Engine/loader/CustomVCoordFrameCB.o: Engine/loader/CustomVCoordFrameCB.cpp.o
+.PHONY : Engine/loader/CustomVCoordFrameCB.o
+
+# target to build an object file
+Engine/loader/CustomVCoordFrameCB.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CustomVCoordFrameCB.cpp.o
+.PHONY : Engine/loader/CustomVCoordFrameCB.cpp.o
+
+Engine/loader/CustomVCoordFrameCB.i: Engine/loader/CustomVCoordFrameCB.cpp.i
+.PHONY : Engine/loader/CustomVCoordFrameCB.i
+
+# target to preprocess a source file
+Engine/loader/CustomVCoordFrameCB.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CustomVCoordFrameCB.cpp.i
+.PHONY : Engine/loader/CustomVCoordFrameCB.cpp.i
+
+Engine/loader/CustomVCoordFrameCB.s: Engine/loader/CustomVCoordFrameCB.cpp.s
+.PHONY : Engine/loader/CustomVCoordFrameCB.s
+
+# target to generate assembly for a file
+Engine/loader/CustomVCoordFrameCB.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CustomVCoordFrameCB.cpp.s
+.PHONY : Engine/loader/CustomVCoordFrameCB.cpp.s
+
+Engine/loader/PhysicsLabZW.o: Engine/loader/PhysicsLabZW.cpp.o
+.PHONY : Engine/loader/PhysicsLabZW.o
+
+# target to build an object file
+Engine/loader/PhysicsLabZW.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/PhysicsLabZW.cpp.o
+.PHONY : Engine/loader/PhysicsLabZW.cpp.o
+
+Engine/loader/PhysicsLabZW.i: Engine/loader/PhysicsLabZW.cpp.i
+.PHONY : Engine/loader/PhysicsLabZW.i
+
+# target to preprocess a source file
+Engine/loader/PhysicsLabZW.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/PhysicsLabZW.cpp.i
+.PHONY : Engine/loader/PhysicsLabZW.cpp.i
+
+Engine/loader/PhysicsLabZW.s: Engine/loader/PhysicsLabZW.cpp.s
+.PHONY : Engine/loader/PhysicsLabZW.s
+
+# target to generate assembly for a file
+Engine/loader/PhysicsLabZW.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/PhysicsLabZW.cpp.s
+.PHONY : Engine/loader/PhysicsLabZW.cpp.s
+
+Engine/loader/Scene.o: Engine/loader/Scene.cpp.o
+.PHONY : Engine/loader/Scene.o
+
+# target to build an object file
+Engine/loader/Scene.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/Scene.cpp.o
+.PHONY : Engine/loader/Scene.cpp.o
+
+Engine/loader/Scene.i: Engine/loader/Scene.cpp.i
+.PHONY : Engine/loader/Scene.i
+
+# target to preprocess a source file
+Engine/loader/Scene.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/Scene.cpp.i
+.PHONY : Engine/loader/Scene.cpp.i
+
+Engine/loader/Scene.s: Engine/loader/Scene.cpp.s
+.PHONY : Engine/loader/Scene.s
+
+# target to generate assembly for a file
+Engine/loader/Scene.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/Scene.cpp.s
+.PHONY : Engine/loader/Scene.cpp.s
+
+Engine/src/AssetDB.o: Engine/src/AssetDB.cpp.o
+.PHONY : Engine/src/AssetDB.o
+
+# target to build an object file
+Engine/src/AssetDB.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/AssetDB.cpp.o
+.PHONY : Engine/src/AssetDB.cpp.o
+
+Engine/src/AssetDB.i: Engine/src/AssetDB.cpp.i
+.PHONY : Engine/src/AssetDB.i
+
+# target to preprocess a source file
+Engine/src/AssetDB.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/AssetDB.cpp.i
+.PHONY : Engine/src/AssetDB.cpp.i
+
+Engine/src/AssetDB.s: Engine/src/AssetDB.cpp.s
+.PHONY : Engine/src/AssetDB.s
+
+# target to generate assembly for a file
+Engine/src/AssetDB.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/AssetDB.cpp.s
+.PHONY : Engine/src/AssetDB.cpp.s
+
+Engine/src/Core.o: Engine/src/Core.cpp.o
+.PHONY : Engine/src/Core.o
+
+# target to build an object file
+Engine/src/Core.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Core.cpp.o
+.PHONY : Engine/src/Core.cpp.o
+
+Engine/src/Core.i: Engine/src/Core.cpp.i
+.PHONY : Engine/src/Core.i
+
+# target to preprocess a source file
+Engine/src/Core.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Core.cpp.i
+.PHONY : Engine/src/Core.cpp.i
+
+Engine/src/Core.s: Engine/src/Core.cpp.s
+.PHONY : Engine/src/Core.s
+
+# target to generate assembly for a file
+Engine/src/Core.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Core.cpp.s
+.PHONY : Engine/src/Core.cpp.s
+
+Engine/src/DirectionalLight.o: Engine/src/DirectionalLight.cpp.o
+.PHONY : Engine/src/DirectionalLight.o
+
+# target to build an object file
+Engine/src/DirectionalLight.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLight.cpp.o
+.PHONY : Engine/src/DirectionalLight.cpp.o
+
+Engine/src/DirectionalLight.i: Engine/src/DirectionalLight.cpp.i
+.PHONY : Engine/src/DirectionalLight.i
+
+# target to preprocess a source file
+Engine/src/DirectionalLight.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLight.cpp.i
+.PHONY : Engine/src/DirectionalLight.cpp.i
+
+Engine/src/DirectionalLight.s: Engine/src/DirectionalLight.cpp.s
+.PHONY : Engine/src/DirectionalLight.s
+
+# target to generate assembly for a file
+Engine/src/DirectionalLight.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLight.cpp.s
+.PHONY : Engine/src/DirectionalLight.cpp.s
+
+Engine/src/DirectionalLightCallback.o: Engine/src/DirectionalLightCallback.cpp.o
+.PHONY : Engine/src/DirectionalLightCallback.o
+
+# target to build an object file
+Engine/src/DirectionalLightCallback.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightCallback.cpp.o
+.PHONY : Engine/src/DirectionalLightCallback.cpp.o
+
+Engine/src/DirectionalLightCallback.i: Engine/src/DirectionalLightCallback.cpp.i
+.PHONY : Engine/src/DirectionalLightCallback.i
+
+# target to preprocess a source file
+Engine/src/DirectionalLightCallback.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightCallback.cpp.i
+.PHONY : Engine/src/DirectionalLightCallback.cpp.i
+
+Engine/src/DirectionalLightCallback.s: Engine/src/DirectionalLightCallback.cpp.s
+.PHONY : Engine/src/DirectionalLightCallback.s
+
+# target to generate assembly for a file
+Engine/src/DirectionalLightCallback.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightCallback.cpp.s
+.PHONY : Engine/src/DirectionalLightCallback.cpp.s
+
+Engine/src/DirectionalLightGroup.o: Engine/src/DirectionalLightGroup.cpp.o
+.PHONY : Engine/src/DirectionalLightGroup.o
+
+# target to build an object file
+Engine/src/DirectionalLightGroup.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightGroup.cpp.o
+.PHONY : Engine/src/DirectionalLightGroup.cpp.o
+
+Engine/src/DirectionalLightGroup.i: Engine/src/DirectionalLightGroup.cpp.i
+.PHONY : Engine/src/DirectionalLightGroup.i
+
+# target to preprocess a source file
+Engine/src/DirectionalLightGroup.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightGroup.cpp.i
+.PHONY : Engine/src/DirectionalLightGroup.cpp.i
+
+Engine/src/DirectionalLightGroup.s: Engine/src/DirectionalLightGroup.cpp.s
+.PHONY : Engine/src/DirectionalLightGroup.s
+
+# target to generate assembly for a file
+Engine/src/DirectionalLightGroup.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightGroup.cpp.s
+.PHONY : Engine/src/DirectionalLightGroup.cpp.s
+
+Engine/src/DirectionalLightingPass.o: Engine/src/DirectionalLightingPass.cpp.o
+.PHONY : Engine/src/DirectionalLightingPass.o
+
+# target to build an object file
+Engine/src/DirectionalLightingPass.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightingPass.cpp.o
+.PHONY : Engine/src/DirectionalLightingPass.cpp.o
+
+Engine/src/DirectionalLightingPass.i: Engine/src/DirectionalLightingPass.cpp.i
+.PHONY : Engine/src/DirectionalLightingPass.i
+
+# target to preprocess a source file
+Engine/src/DirectionalLightingPass.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightingPass.cpp.i
+.PHONY : Engine/src/DirectionalLightingPass.cpp.i
+
+Engine/src/DirectionalLightingPass.s: Engine/src/DirectionalLightingPass.cpp.s
+.PHONY : Engine/src/DirectionalLightingPass.s
+
+# target to generate assembly for a file
+Engine/src/DirectionalLightingPass.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightingPass.cpp.s
+.PHONY : Engine/src/DirectionalLightingPass.cpp.s
+
+Engine/src/FinalPass.o: Engine/src/FinalPass.cpp.o
+.PHONY : Engine/src/FinalPass.o
+
+# target to build an object file
+Engine/src/FinalPass.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/FinalPass.cpp.o
+.PHONY : Engine/src/FinalPass.cpp.o
+
+Engine/src/FinalPass.i: Engine/src/FinalPass.cpp.i
+.PHONY : Engine/src/FinalPass.i
+
+# target to preprocess a source file
+Engine/src/FinalPass.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/FinalPass.cpp.i
+.PHONY : Engine/src/FinalPass.cpp.i
+
+Engine/src/FinalPass.s: Engine/src/FinalPass.cpp.s
+.PHONY : Engine/src/FinalPass.s
+
+# target to generate assembly for a file
+Engine/src/FinalPass.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/FinalPass.cpp.s
+.PHONY : Engine/src/FinalPass.cpp.s
+
+Engine/src/GeometryPass.o: Engine/src/GeometryPass.cpp.o
+.PHONY : Engine/src/GeometryPass.o
+
+# target to build an object file
+Engine/src/GeometryPass.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/GeometryPass.cpp.o
+.PHONY : Engine/src/GeometryPass.cpp.o
+
+Engine/src/GeometryPass.i: Engine/src/GeometryPass.cpp.i
+.PHONY : Engine/src/GeometryPass.i
+
+# target to preprocess a source file
+Engine/src/GeometryPass.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/GeometryPass.cpp.i
+.PHONY : Engine/src/GeometryPass.cpp.i
+
+Engine/src/GeometryPass.s: Engine/src/GeometryPass.cpp.s
+.PHONY : Engine/src/GeometryPass.s
+
+# target to generate assembly for a file
+Engine/src/GeometryPass.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/GeometryPass.cpp.s
+.PHONY : Engine/src/GeometryPass.cpp.s
+
+Engine/src/HDRPass.o: Engine/src/HDRPass.cpp.o
+.PHONY : Engine/src/HDRPass.o
+
+# target to build an object file
+Engine/src/HDRPass.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/HDRPass.cpp.o
+.PHONY : Engine/src/HDRPass.cpp.o
+
+Engine/src/HDRPass.i: Engine/src/HDRPass.cpp.i
+.PHONY : Engine/src/HDRPass.i
+
+# target to preprocess a source file
+Engine/src/HDRPass.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/HDRPass.cpp.i
+.PHONY : Engine/src/HDRPass.cpp.i
+
+Engine/src/HDRPass.s: Engine/src/HDRPass.cpp.s
+.PHONY : Engine/src/HDRPass.s
+
+# target to generate assembly for a file
+Engine/src/HDRPass.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/HDRPass.cpp.s
+.PHONY : Engine/src/HDRPass.cpp.s
+
+Engine/src/ImportanceSamplingPass.o: Engine/src/ImportanceSamplingPass.cpp.o
+.PHONY : Engine/src/ImportanceSamplingPass.o
+
+# target to build an object file
+Engine/src/ImportanceSamplingPass.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ImportanceSamplingPass.cpp.o
+.PHONY : Engine/src/ImportanceSamplingPass.cpp.o
+
+Engine/src/ImportanceSamplingPass.i: Engine/src/ImportanceSamplingPass.cpp.i
+.PHONY : Engine/src/ImportanceSamplingPass.i
+
+# target to preprocess a source file
+Engine/src/ImportanceSamplingPass.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ImportanceSamplingPass.cpp.i
+.PHONY : Engine/src/ImportanceSamplingPass.cpp.i
+
+Engine/src/ImportanceSamplingPass.s: Engine/src/ImportanceSamplingPass.cpp.s
+.PHONY : Engine/src/ImportanceSamplingPass.s
+
+# target to generate assembly for a file
+Engine/src/ImportanceSamplingPass.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ImportanceSamplingPass.cpp.s
+.PHONY : Engine/src/ImportanceSamplingPass.cpp.s
+
+Engine/src/IndirectLightingPass.o: Engine/src/IndirectLightingPass.cpp.o
+.PHONY : Engine/src/IndirectLightingPass.o
+
+# target to build an object file
+Engine/src/IndirectLightingPass.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/IndirectLightingPass.cpp.o
+.PHONY : Engine/src/IndirectLightingPass.cpp.o
+
+Engine/src/IndirectLightingPass.i: Engine/src/IndirectLightingPass.cpp.i
+.PHONY : Engine/src/IndirectLightingPass.i
+
+# target to preprocess a source file
+Engine/src/IndirectLightingPass.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/IndirectLightingPass.cpp.i
+.PHONY : Engine/src/IndirectLightingPass.cpp.i
+
+Engine/src/IndirectLightingPass.s: Engine/src/IndirectLightingPass.cpp.s
+.PHONY : Engine/src/IndirectLightingPass.s
+
+# target to generate assembly for a file
+Engine/src/IndirectLightingPass.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/IndirectLightingPass.cpp.s
+.PHONY : Engine/src/IndirectLightingPass.cpp.s
+
+Engine/src/KeyboardHandler.o: Engine/src/KeyboardHandler.cpp.o
+.PHONY : Engine/src/KeyboardHandler.o
+
+# target to build an object file
+Engine/src/KeyboardHandler.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/KeyboardHandler.cpp.o
+.PHONY : Engine/src/KeyboardHandler.cpp.o
+
+Engine/src/KeyboardHandler.i: Engine/src/KeyboardHandler.cpp.i
+.PHONY : Engine/src/KeyboardHandler.i
+
+# target to preprocess a source file
+Engine/src/KeyboardHandler.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/KeyboardHandler.cpp.i
+.PHONY : Engine/src/KeyboardHandler.cpp.i
+
+Engine/src/KeyboardHandler.s: Engine/src/KeyboardHandler.cpp.s
+.PHONY : Engine/src/KeyboardHandler.s
+
+# target to generate assembly for a file
+Engine/src/KeyboardHandler.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/KeyboardHandler.cpp.s
+.PHONY : Engine/src/KeyboardHandler.cpp.s
+
+Engine/src/LightCallback.o: Engine/src/LightCallback.cpp.o
+.PHONY : Engine/src/LightCallback.o
+
+# target to build an object file
+Engine/src/LightCallback.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightCallback.cpp.o
+.PHONY : Engine/src/LightCallback.cpp.o
+
+Engine/src/LightCallback.i: Engine/src/LightCallback.cpp.i
+.PHONY : Engine/src/LightCallback.i
+
+# target to preprocess a source file
+Engine/src/LightCallback.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightCallback.cpp.i
+.PHONY : Engine/src/LightCallback.cpp.i
+
+Engine/src/LightCallback.s: Engine/src/LightCallback.cpp.s
+.PHONY : Engine/src/LightCallback.s
+
+# target to generate assembly for a file
+Engine/src/LightCallback.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightCallback.cpp.s
+.PHONY : Engine/src/LightCallback.cpp.s
+
+Engine/src/LightGroup.o: Engine/src/LightGroup.cpp.o
+.PHONY : Engine/src/LightGroup.o
+
+# target to build an object file
+Engine/src/LightGroup.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightGroup.cpp.o
+.PHONY : Engine/src/LightGroup.cpp.o
+
+Engine/src/LightGroup.i: Engine/src/LightGroup.cpp.i
+.PHONY : Engine/src/LightGroup.i
+
+# target to preprocess a source file
+Engine/src/LightGroup.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightGroup.cpp.i
+.PHONY : Engine/src/LightGroup.cpp.i
+
+Engine/src/LightGroup.s: Engine/src/LightGroup.cpp.s
+.PHONY : Engine/src/LightGroup.s
+
+# target to generate assembly for a file
+Engine/src/LightGroup.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightGroup.cpp.s
+.PHONY : Engine/src/LightGroup.cpp.s
+
+Engine/src/LightGroupAnimationCallback.o: Engine/src/LightGroupAnimationCallback.cpp.o
+.PHONY : Engine/src/LightGroupAnimationCallback.o
+
+# target to build an object file
+Engine/src/LightGroupAnimationCallback.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightGroupAnimationCallback.cpp.o
+.PHONY : Engine/src/LightGroupAnimationCallback.cpp.o
+
+Engine/src/LightGroupAnimationCallback.i: Engine/src/LightGroupAnimationCallback.cpp.i
+.PHONY : Engine/src/LightGroupAnimationCallback.i
+
+# target to preprocess a source file
+Engine/src/LightGroupAnimationCallback.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightGroupAnimationCallback.cpp.i
+.PHONY : Engine/src/LightGroupAnimationCallback.cpp.i
+
+Engine/src/LightGroupAnimationCallback.s: Engine/src/LightGroupAnimationCallback.cpp.s
+.PHONY : Engine/src/LightGroupAnimationCallback.s
+
+# target to generate assembly for a file
+Engine/src/LightGroupAnimationCallback.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightGroupAnimationCallback.cpp.s
+.PHONY : Engine/src/LightGroupAnimationCallback.cpp.s
+
+Engine/src/LightTrackBallManipulator.o: Engine/src/LightTrackBallManipulator.cpp.o
+.PHONY : Engine/src/LightTrackBallManipulator.o
+
+# target to build an object file
+Engine/src/LightTrackBallManipulator.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightTrackBallManipulator.cpp.o
+.PHONY : Engine/src/LightTrackBallManipulator.cpp.o
+
+Engine/src/LightTrackBallManipulator.i: Engine/src/LightTrackBallManipulator.cpp.i
+.PHONY : Engine/src/LightTrackBallManipulator.i
+
+# target to preprocess a source file
+Engine/src/LightTrackBallManipulator.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightTrackBallManipulator.cpp.i
+.PHONY : Engine/src/LightTrackBallManipulator.cpp.i
+
+Engine/src/LightTrackBallManipulator.s: Engine/src/LightTrackBallManipulator.cpp.s
+.PHONY : Engine/src/LightTrackBallManipulator.s
+
+# target to generate assembly for a file
+Engine/src/LightTrackBallManipulator.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightTrackBallManipulator.cpp.s
+.PHONY : Engine/src/LightTrackBallManipulator.cpp.s
+
+Engine/src/LightingPass.o: Engine/src/LightingPass.cpp.o
+.PHONY : Engine/src/LightingPass.o
+
+# target to build an object file
+Engine/src/LightingPass.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightingPass.cpp.o
+.PHONY : Engine/src/LightingPass.cpp.o
+
+Engine/src/LightingPass.i: Engine/src/LightingPass.cpp.i
+.PHONY : Engine/src/LightingPass.i
+
+# target to preprocess a source file
+Engine/src/LightingPass.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightingPass.cpp.i
+.PHONY : Engine/src/LightingPass.cpp.i
+
+Engine/src/LightingPass.s: Engine/src/LightingPass.cpp.s
+.PHONY : Engine/src/LightingPass.s
+
+# target to generate assembly for a file
+Engine/src/LightingPass.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightingPass.cpp.s
+.PHONY : Engine/src/LightingPass.cpp.s
+
+Engine/src/Material.o: Engine/src/Material.cpp.o
+.PHONY : Engine/src/Material.o
+
+# target to build an object file
+Engine/src/Material.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Material.cpp.o
+.PHONY : Engine/src/Material.cpp.o
+
+Engine/src/Material.i: Engine/src/Material.cpp.i
+.PHONY : Engine/src/Material.i
+
+# target to preprocess a source file
+Engine/src/Material.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Material.cpp.i
+.PHONY : Engine/src/Material.cpp.i
+
+Engine/src/Material.s: Engine/src/Material.cpp.s
+.PHONY : Engine/src/Material.s
+
+# target to generate assembly for a file
+Engine/src/Material.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Material.cpp.s
+.PHONY : Engine/src/Material.cpp.s
+
+Engine/src/PointLight.o: Engine/src/PointLight.cpp.o
+.PHONY : Engine/src/PointLight.o
+
+# target to build an object file
+Engine/src/PointLight.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/PointLight.cpp.o
+.PHONY : Engine/src/PointLight.cpp.o
+
+Engine/src/PointLight.i: Engine/src/PointLight.cpp.i
+.PHONY : Engine/src/PointLight.i
+
+# target to preprocess a source file
+Engine/src/PointLight.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/PointLight.cpp.i
+.PHONY : Engine/src/PointLight.cpp.i
+
+Engine/src/PointLight.s: Engine/src/PointLight.cpp.s
+.PHONY : Engine/src/PointLight.s
+
+# target to generate assembly for a file
+Engine/src/PointLight.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/PointLight.cpp.s
+.PHONY : Engine/src/PointLight.cpp.s
+
+Engine/src/SSAOPass.o: Engine/src/SSAOPass.cpp.o
+.PHONY : Engine/src/SSAOPass.o
+
+# target to build an object file
+Engine/src/SSAOPass.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SSAOPass.cpp.o
+.PHONY : Engine/src/SSAOPass.cpp.o
+
+Engine/src/SSAOPass.i: Engine/src/SSAOPass.cpp.i
+.PHONY : Engine/src/SSAOPass.i
+
+# target to preprocess a source file
+Engine/src/SSAOPass.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SSAOPass.cpp.i
+.PHONY : Engine/src/SSAOPass.cpp.i
+
+Engine/src/SSAOPass.s: Engine/src/SSAOPass.cpp.s
+.PHONY : Engine/src/SSAOPass.s
+
+# target to generate assembly for a file
+Engine/src/SSAOPass.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SSAOPass.cpp.s
+.PHONY : Engine/src/SSAOPass.cpp.s
+
+Engine/src/SceneEventCallback.o: Engine/src/SceneEventCallback.cpp.o
+.PHONY : Engine/src/SceneEventCallback.o
+
+# target to build an object file
+Engine/src/SceneEventCallback.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SceneEventCallback.cpp.o
+.PHONY : Engine/src/SceneEventCallback.cpp.o
+
+Engine/src/SceneEventCallback.i: Engine/src/SceneEventCallback.cpp.i
+.PHONY : Engine/src/SceneEventCallback.i
+
+# target to preprocess a source file
+Engine/src/SceneEventCallback.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SceneEventCallback.cpp.i
+.PHONY : Engine/src/SceneEventCallback.cpp.i
+
+Engine/src/SceneEventCallback.s: Engine/src/SceneEventCallback.cpp.s
+.PHONY : Engine/src/SceneEventCallback.s
+
+# target to generate assembly for a file
+Engine/src/SceneEventCallback.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SceneEventCallback.cpp.s
+.PHONY : Engine/src/SceneEventCallback.cpp.s
+
+Engine/src/ScreenPass.o: Engine/src/ScreenPass.cpp.o
+.PHONY : Engine/src/ScreenPass.o
+
+# target to build an object file
+Engine/src/ScreenPass.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ScreenPass.cpp.o
+.PHONY : Engine/src/ScreenPass.cpp.o
+
+Engine/src/ScreenPass.i: Engine/src/ScreenPass.cpp.i
+.PHONY : Engine/src/ScreenPass.i
+
+# target to preprocess a source file
+Engine/src/ScreenPass.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ScreenPass.cpp.i
+.PHONY : Engine/src/ScreenPass.cpp.i
+
+Engine/src/ScreenPass.s: Engine/src/ScreenPass.cpp.s
+.PHONY : Engine/src/ScreenPass.s
+
+# target to generate assembly for a file
+Engine/src/ScreenPass.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ScreenPass.cpp.s
+.PHONY : Engine/src/ScreenPass.cpp.s
+
+Engine/src/ShadowCallback.o: Engine/src/ShadowCallback.cpp.o
+.PHONY : Engine/src/ShadowCallback.o
+
+# target to build an object file
+Engine/src/ShadowCallback.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ShadowCallback.cpp.o
+.PHONY : Engine/src/ShadowCallback.cpp.o
+
+Engine/src/ShadowCallback.i: Engine/src/ShadowCallback.cpp.i
+.PHONY : Engine/src/ShadowCallback.i
+
+# target to preprocess a source file
+Engine/src/ShadowCallback.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ShadowCallback.cpp.i
+.PHONY : Engine/src/ShadowCallback.cpp.i
+
+Engine/src/ShadowCallback.s: Engine/src/ShadowCallback.cpp.s
+.PHONY : Engine/src/ShadowCallback.s
+
+# target to generate assembly for a file
+Engine/src/ShadowCallback.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ShadowCallback.cpp.s
+.PHONY : Engine/src/ShadowCallback.cpp.s
+
+Engine/src/ShadowGroup.o: Engine/src/ShadowGroup.cpp.o
+.PHONY : Engine/src/ShadowGroup.o
+
+# target to build an object file
+Engine/src/ShadowGroup.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ShadowGroup.cpp.o
+.PHONY : Engine/src/ShadowGroup.cpp.o
+
+Engine/src/ShadowGroup.i: Engine/src/ShadowGroup.cpp.i
+.PHONY : Engine/src/ShadowGroup.i
+
+# target to preprocess a source file
+Engine/src/ShadowGroup.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ShadowGroup.cpp.i
+.PHONY : Engine/src/ShadowGroup.cpp.i
+
+Engine/src/ShadowGroup.s: Engine/src/ShadowGroup.cpp.s
+.PHONY : Engine/src/ShadowGroup.s
+
+# target to generate assembly for a file
+Engine/src/ShadowGroup.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ShadowGroup.cpp.s
+.PHONY : Engine/src/ShadowGroup.cpp.s
+
+Engine/src/SphereSegment.o: Engine/src/SphereSegment.cpp.o
+.PHONY : Engine/src/SphereSegment.o
+
+# target to build an object file
+Engine/src/SphereSegment.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SphereSegment.cpp.o
+.PHONY : Engine/src/SphereSegment.cpp.o
+
+Engine/src/SphereSegment.i: Engine/src/SphereSegment.cpp.i
+.PHONY : Engine/src/SphereSegment.i
+
+# target to preprocess a source file
+Engine/src/SphereSegment.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SphereSegment.cpp.i
+.PHONY : Engine/src/SphereSegment.cpp.i
+
+Engine/src/SphereSegment.s: Engine/src/SphereSegment.cpp.s
+.PHONY : Engine/src/SphereSegment.s
+
+# target to generate assembly for a file
+Engine/src/SphereSegment.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SphereSegment.cpp.s
+.PHONY : Engine/src/SphereSegment.cpp.s
+
+Engine/src/SpotLight.o: Engine/src/SpotLight.cpp.o
+.PHONY : Engine/src/SpotLight.o
+
+# target to build an object file
+Engine/src/SpotLight.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SpotLight.cpp.o
+.PHONY : Engine/src/SpotLight.cpp.o
+
+Engine/src/SpotLight.i: Engine/src/SpotLight.cpp.i
+.PHONY : Engine/src/SpotLight.i
+
+# target to preprocess a source file
+Engine/src/SpotLight.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SpotLight.cpp.i
+.PHONY : Engine/src/SpotLight.cpp.i
+
+Engine/src/SpotLight.s: Engine/src/SpotLight.cpp.s
+.PHONY : Engine/src/SpotLight.s
+
+# target to generate assembly for a file
+Engine/src/SpotLight.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SpotLight.cpp.s
+.PHONY : Engine/src/SpotLight.cpp.s
+
+Engine/src/SpotLightGroup.o: Engine/src/SpotLightGroup.cpp.o
+.PHONY : Engine/src/SpotLightGroup.o
+
+# target to build an object file
+Engine/src/SpotLightGroup.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SpotLightGroup.cpp.o
+.PHONY : Engine/src/SpotLightGroup.cpp.o
+
+Engine/src/SpotLightGroup.i: Engine/src/SpotLightGroup.cpp.i
+.PHONY : Engine/src/SpotLightGroup.i
+
+# target to preprocess a source file
+Engine/src/SpotLightGroup.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SpotLightGroup.cpp.i
+.PHONY : Engine/src/SpotLightGroup.cpp.i
+
+Engine/src/SpotLightGroup.s: Engine/src/SpotLightGroup.cpp.s
+.PHONY : Engine/src/SpotLightGroup.s
+
+# target to generate assembly for a file
+Engine/src/SpotLightGroup.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SpotLightGroup.cpp.s
+.PHONY : Engine/src/SpotLightGroup.cpp.s
+
+Engine/src/Utils.o: Engine/src/Utils.cpp.o
+.PHONY : Engine/src/Utils.o
+
+# target to build an object file
+Engine/src/Utils.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Utils.cpp.o
+.PHONY : Engine/src/Utils.cpp.o
+
+Engine/src/Utils.i: Engine/src/Utils.cpp.i
+.PHONY : Engine/src/Utils.i
+
+# target to preprocess a source file
+Engine/src/Utils.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Utils.cpp.i
+.PHONY : Engine/src/Utils.cpp.i
+
+Engine/src/Utils.s: Engine/src/Utils.cpp.s
+.PHONY : Engine/src/Utils.s
+
+# target to generate assembly for a file
+Engine/src/Utils.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Utils.cpp.s
+.PHONY : Engine/src/Utils.cpp.s
+
+Engine/src/VPLGroup.o: Engine/src/VPLGroup.cpp.o
+.PHONY : Engine/src/VPLGroup.o
+
+# target to build an object file
+Engine/src/VPLGroup.cpp.o:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/VPLGroup.cpp.o
+.PHONY : Engine/src/VPLGroup.cpp.o
+
+Engine/src/VPLGroup.i: Engine/src/VPLGroup.cpp.i
+.PHONY : Engine/src/VPLGroup.i
+
+# target to preprocess a source file
+Engine/src/VPLGroup.cpp.i:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/VPLGroup.cpp.i
+.PHONY : Engine/src/VPLGroup.cpp.i
+
+Engine/src/VPLGroup.s: Engine/src/VPLGroup.cpp.s
+.PHONY : Engine/src/VPLGroup.s
+
+# target to generate assembly for a file
+Engine/src/VPLGroup.cpp.s:
+	cd /Users/Wqxhouse-Mac/vrproject/CVRPlugins && $(MAKE) -f calit2/vrphysics/CMakeFiles/vrphysics.dir/build.make calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/VPLGroup.cpp.s
+.PHONY : Engine/src/VPLGroup.cpp.s
+>>>>>>> master
 
 # Help Target
 help:
@@ -591,6 +1409,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... vrphysics"
+<<<<<<< HEAD
 	@echo "... Engine/AssetDB.o"
 	@echo "... Engine/AssetDB.i"
 	@echo "... Engine/AssetDB.s"
@@ -645,6 +1464,110 @@ help:
 	@echo "... PhysicsLabZW.o"
 	@echo "... PhysicsLabZW.i"
 	@echo "... PhysicsLabZW.s"
+=======
+	@echo "... Engine/loader/CVRKeyboardHandler.o"
+	@echo "... Engine/loader/CVRKeyboardHandler.i"
+	@echo "... Engine/loader/CVRKeyboardHandler.s"
+	@echo "... Engine/loader/CustomTrackballManipulator.o"
+	@echo "... Engine/loader/CustomTrackballManipulator.i"
+	@echo "... Engine/loader/CustomTrackballManipulator.s"
+	@echo "... Engine/loader/CustomVCoordFrameCB.o"
+	@echo "... Engine/loader/CustomVCoordFrameCB.i"
+	@echo "... Engine/loader/CustomVCoordFrameCB.s"
+	@echo "... Engine/loader/PhysicsLabZW.o"
+	@echo "... Engine/loader/PhysicsLabZW.i"
+	@echo "... Engine/loader/PhysicsLabZW.s"
+	@echo "... Engine/loader/Scene.o"
+	@echo "... Engine/loader/Scene.i"
+	@echo "... Engine/loader/Scene.s"
+	@echo "... Engine/src/AssetDB.o"
+	@echo "... Engine/src/AssetDB.i"
+	@echo "... Engine/src/AssetDB.s"
+	@echo "... Engine/src/Core.o"
+	@echo "... Engine/src/Core.i"
+	@echo "... Engine/src/Core.s"
+	@echo "... Engine/src/DirectionalLight.o"
+	@echo "... Engine/src/DirectionalLight.i"
+	@echo "... Engine/src/DirectionalLight.s"
+	@echo "... Engine/src/DirectionalLightCallback.o"
+	@echo "... Engine/src/DirectionalLightCallback.i"
+	@echo "... Engine/src/DirectionalLightCallback.s"
+	@echo "... Engine/src/DirectionalLightGroup.o"
+	@echo "... Engine/src/DirectionalLightGroup.i"
+	@echo "... Engine/src/DirectionalLightGroup.s"
+	@echo "... Engine/src/DirectionalLightingPass.o"
+	@echo "... Engine/src/DirectionalLightingPass.i"
+	@echo "... Engine/src/DirectionalLightingPass.s"
+	@echo "... Engine/src/FinalPass.o"
+	@echo "... Engine/src/FinalPass.i"
+	@echo "... Engine/src/FinalPass.s"
+	@echo "... Engine/src/GeometryPass.o"
+	@echo "... Engine/src/GeometryPass.i"
+	@echo "... Engine/src/GeometryPass.s"
+	@echo "... Engine/src/HDRPass.o"
+	@echo "... Engine/src/HDRPass.i"
+	@echo "... Engine/src/HDRPass.s"
+	@echo "... Engine/src/ImportanceSamplingPass.o"
+	@echo "... Engine/src/ImportanceSamplingPass.i"
+	@echo "... Engine/src/ImportanceSamplingPass.s"
+	@echo "... Engine/src/IndirectLightingPass.o"
+	@echo "... Engine/src/IndirectLightingPass.i"
+	@echo "... Engine/src/IndirectLightingPass.s"
+	@echo "... Engine/src/KeyboardHandler.o"
+	@echo "... Engine/src/KeyboardHandler.i"
+	@echo "... Engine/src/KeyboardHandler.s"
+	@echo "... Engine/src/LightCallback.o"
+	@echo "... Engine/src/LightCallback.i"
+	@echo "... Engine/src/LightCallback.s"
+	@echo "... Engine/src/LightGroup.o"
+	@echo "... Engine/src/LightGroup.i"
+	@echo "... Engine/src/LightGroup.s"
+	@echo "... Engine/src/LightGroupAnimationCallback.o"
+	@echo "... Engine/src/LightGroupAnimationCallback.i"
+	@echo "... Engine/src/LightGroupAnimationCallback.s"
+	@echo "... Engine/src/LightTrackBallManipulator.o"
+	@echo "... Engine/src/LightTrackBallManipulator.i"
+	@echo "... Engine/src/LightTrackBallManipulator.s"
+	@echo "... Engine/src/LightingPass.o"
+	@echo "... Engine/src/LightingPass.i"
+	@echo "... Engine/src/LightingPass.s"
+	@echo "... Engine/src/Material.o"
+	@echo "... Engine/src/Material.i"
+	@echo "... Engine/src/Material.s"
+	@echo "... Engine/src/PointLight.o"
+	@echo "... Engine/src/PointLight.i"
+	@echo "... Engine/src/PointLight.s"
+	@echo "... Engine/src/SSAOPass.o"
+	@echo "... Engine/src/SSAOPass.i"
+	@echo "... Engine/src/SSAOPass.s"
+	@echo "... Engine/src/SceneEventCallback.o"
+	@echo "... Engine/src/SceneEventCallback.i"
+	@echo "... Engine/src/SceneEventCallback.s"
+	@echo "... Engine/src/ScreenPass.o"
+	@echo "... Engine/src/ScreenPass.i"
+	@echo "... Engine/src/ScreenPass.s"
+	@echo "... Engine/src/ShadowCallback.o"
+	@echo "... Engine/src/ShadowCallback.i"
+	@echo "... Engine/src/ShadowCallback.s"
+	@echo "... Engine/src/ShadowGroup.o"
+	@echo "... Engine/src/ShadowGroup.i"
+	@echo "... Engine/src/ShadowGroup.s"
+	@echo "... Engine/src/SphereSegment.o"
+	@echo "... Engine/src/SphereSegment.i"
+	@echo "... Engine/src/SphereSegment.s"
+	@echo "... Engine/src/SpotLight.o"
+	@echo "... Engine/src/SpotLight.i"
+	@echo "... Engine/src/SpotLight.s"
+	@echo "... Engine/src/SpotLightGroup.o"
+	@echo "... Engine/src/SpotLightGroup.i"
+	@echo "... Engine/src/SpotLightGroup.s"
+	@echo "... Engine/src/Utils.o"
+	@echo "... Engine/src/Utils.i"
+	@echo "... Engine/src/Utils.s"
+	@echo "... Engine/src/VPLGroup.o"
+	@echo "... Engine/src/VPLGroup.i"
+	@echo "... Engine/src/VPLGroup.s"
+>>>>>>> master
 .PHONY : help
 
 
