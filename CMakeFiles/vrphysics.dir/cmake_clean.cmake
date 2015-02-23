@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/vrphysics.dir/Engine/loader/CVRKeyboardHandler.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/loader/PhysicsLabZW.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/loader/CustomTrackballManipulator.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/loader/Scene.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/loader/CustomVCoordFrameCB.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/AssetDB.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/LightTrackBallManipulator.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/Core.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/LightingPass.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/DirectionalLight.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/Material.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightCallback.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/PointLight.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightGroup.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/SSAOPass.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightingPass.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/SceneEventCallback.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/FinalPass.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/ScreenPass.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/GeometryPass.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/ShadowCallback.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/HDRPass.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/ShadowGroup.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/ImportanceSamplingPass.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/SphereSegment.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/IndirectLightingPass.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/SpotLight.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/KeyboardHandler.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/SpotLightGroup.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/LightCallback.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/Utils.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/LightGroup.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/VPLGroup.cpp.o"
+  "CMakeFiles/vrphysics.dir/Engine/src/LightGroupAnimationCallback.cpp.o"
+  "/Users/Wqxhouse-Mac/vrproject/calvr/lib/calvr-plugins/libvrphysics.pdb"
+  "/Users/Wqxhouse-Mac/vrproject/calvr/lib/calvr-plugins/libvrphysics.dylib"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/vrphysics.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
