@@ -94,7 +94,7 @@ osg::ref_ptr<osg::Group> constructPlane()
 
 Core::Core()
 :_handleDirLights(NULL), _handlePointLights(NULL), _handleGeometries(NULL),
- _hasCustomViewer(false), _hasCustomCamera(false), _debugHUDEnabled(true), _debugHUD(NULL), _externalHUDs(false)
+ _hasCustomViewer(false), _hasCustomCamera(false), _debugHUDEnabled(true), _debugHUD(NULL), _externalHUDs(NULL)
 {
     _winWidth = 800;
     _winHeight = 600;
@@ -352,7 +352,7 @@ osg::ref_ptr<osg::Geode> Core::createTexturedQuad(int _TextureWidth, int _Textur
     quad_geom->setTexCoordArray(0, quad_tcoords.get());
     quad_geom->addPrimitiveSet(quad_da.get());
     
-    auto _StateSet = quad_geom->getOrCreateStateSet();
+    osg::ref_ptr<osg::StateSet> _StateSet = quad_geom->getOrCreateStateSet();
     _StateSet->setMode(GL_LIGHTING, osg::StateAttribute::OFF);
     
     quad_geode->addDrawable(quad_geom.get());
