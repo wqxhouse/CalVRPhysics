@@ -203,4 +203,6 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/TrackballManipulator \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/OrbitManipulator \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/StandardManipulator \
-  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/LightTrackBallManipulator.h
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/LightTrackBallManipulator.h \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/BlendFunc \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/BlendEquation

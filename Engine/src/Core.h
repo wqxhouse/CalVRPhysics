@@ -72,6 +72,35 @@ public:
         return _sceneRoot;
     }
     
+    inline osg::ref_ptr<osg::Group> getDebugHUD()
+    {
+        return _debugHUD;
+    }
+    
+    inline void enableDebugHUD()
+    {
+        if(!_debugHUDEnabled)
+        {
+            _sceneRoot->addChild(_debugHUD);
+            _debugHUDEnabled = true;
+        }
+    }
+    
+    inline void disableDebugHUD()
+    {
+        if(_debugHUDEnabled)
+        {
+            _sceneRoot->removeChild(_debugHUD);
+            _debugHUDEnabled = false;
+        }
+    }
+    
+    inline void toggleDebugHUD()
+    {
+        _debugHUDEnabled ? disableDebugHUD() : enableDebugHUD();
+    }
+   
+    void addExternalHUD(osg::ref_ptr<osg::Node> hud);
     void run();
     
 private:
@@ -101,9 +130,6 @@ private:
     osg::ref_ptr<osg::Texture2D> createTexture2DImage(const char *imageName);
     osg::ref_ptr<osg::Geode> createTexturedQuad(int _TextureWidth, int _TextureHeight);
     
-    //    DirectionalLightGroup *addDirectionalLights();
-    //    LightGroup *addPointLights();
-    //
     void configGeomPass();
     void configRSMPass();
     void configDirectionalLightPass();
@@ -118,7 +144,6 @@ private:
     
     void configGeometries();
     void configLights();
-    
     
     void freeHeap();
     
@@ -148,6 +173,9 @@ private:
     
     osg::ref_ptr<osg::Camera> _mainCamera;
     osg::ref_ptr<osg::Group> _debugHUD;
+    osg::ref_ptr<osg::Group> _externalHUDs;
+    osg::ref_ptr<osg::Group> _externalHUDBlending; // blend with final pass
+    
     osg::ref_ptr<KeyboardHandler> _keyboardHandler;
     
     AssetDB *_assetDB;
@@ -164,6 +192,8 @@ private:
     
     bool _hasCustomViewer;
     bool _hasCustomCamera;
+    
+    bool _debugHUDEnabled;
 };
 
 #endif /* defined(__vrphysics__Core__) */

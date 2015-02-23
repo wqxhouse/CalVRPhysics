@@ -1,15 +1,13 @@
 dependencies: \
-  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/PhysicsLabZW.cpp \
-  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/PhysicsLabZW.h \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/TrackballManipulator \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/OrbitManipulator \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/StandardManipulator \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/CameraManipulator \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Node \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/CVRKeyboardHandler.cpp \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/CVRKeyboardHandler.h \
+  /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrKernel/InteractionEvent.h \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Matrix \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Config \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Matrixd \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Object \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Referenced \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Export \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Config \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/OpenThreads/ScopedLock \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/OpenThreads/Mutex \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/OpenThreads/Exports \
@@ -18,15 +16,6 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/CopyOp \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ref_ptr \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Notify \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/StateSet \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/StateAttribute \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/StateAttributeCallback \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Shader \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/GL2Extensions \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/GL \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/buffered_value \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/DisplaySettings \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Matrixd \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec3d \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec2d \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec2f \
@@ -35,6 +24,22 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec4d \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec4f \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Quat \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Matrixf \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec3 \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/PhysicsLabZW.h \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/TrackballManipulator \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/OrbitManipulator \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/StandardManipulator \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/CameraManipulator \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Node \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/StateSet \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/StateAttribute \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/StateAttributeCallback \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Shader \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/GL2Extensions \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/GL \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/buffered_value \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/DisplaySettings \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Uniform \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Array \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/MixinVector \
@@ -50,7 +55,6 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec2ub \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec3ub \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec4ub \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec3 \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec2us \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec3us \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec4us \
@@ -59,8 +63,6 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec4ui \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec2 \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Vec4 \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Matrix \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Matrixf \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/BufferObject \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/FrameStamp \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/BoundingSphere \
@@ -124,7 +126,6 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/GUIEventAdapter \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/GUIActionAdapter \
   /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrKernel/CVRPlugin.h \
-  /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrKernel/InteractionEvent.h \
   /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrKernel/PluginHelper.h \
   /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrKernel/Export.h \
   /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrKernel/SceneManager.h \
@@ -233,12 +234,4 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/../src/IndirectLightingPass.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/../src/ImportanceSamplingPass.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/../src/KeyboardHandler.h \
-  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/CustomTrackballManipulator.h \
-  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/CVRKeyboardHandler.h \
-  /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrConfig/ConfigManager.h \
-  /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrConfig/Export.h \
-  /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrConfig/ConfigFileReader.h \
-  /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrKernel/SceneObject.h \
-  /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrMenu/PopupMenu.h \
-  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/Scene.h \
-  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/CustomVCoordFrameCB.h
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/CustomTrackballManipulator.h

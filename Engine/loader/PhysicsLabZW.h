@@ -26,6 +26,7 @@
 
 #include "../src/Core.h"
 #include "CustomTrackballManipulator.h"
+#include "CVRKeyboardHandler.h"
 
 class PhysicsLabZW : public cvr::CVRPlugin, public cvr::MenuCallback
 {
@@ -35,11 +36,15 @@ protected:
 public:
     PhysicsLabZW();
     virtual ~PhysicsLabZW();
-    void menuCallback(cvr::MenuItem*);
+    void menuCallback(cvr::MenuItem *);
     
     bool init();
     void preFrame();
-    bool processEvent(cvr::InteractionEvent*);
+    bool processEvent(cvr::InteractionEvent *);
+    
+    void disableEngineRender();
+    void enableEngineRender();
+    void toggleEngineRender();
     
 private:
     int _screenWidth;
@@ -52,10 +57,12 @@ private:
     void configEngineCore();
     
     Core *_core;
+    bool _coreEngineEnabled;
+    
     osg::ref_ptr<osg::Camera> _mainCamera;
     
     osg::ref_ptr<CustomTrackballManipulator> _trackBallM;
-
+    CVRKeyboardHandler *_keyboardM;
 };
 
 #endif /* defined(__CalVR_Plugins__PhysicsLabZW__) */

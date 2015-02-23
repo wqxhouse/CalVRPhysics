@@ -11,6 +11,9 @@
 #include "LightTrackBallManipulator.h"
 #include "Utils.h"
 
+#include <osg/BlendFunc>
+#include <osg/BlendEquation>
+
 void optGeoms()
 {
     //    osg::ref_ptr<osg::Geode> aa(new osg::Geode);
@@ -91,7 +94,7 @@ osg::ref_ptr<osg::Group> constructPlane()
 
 Core::Core()
 :_handleDirLights(NULL), _handlePointLights(NULL), _handleGeometries(NULL),
- _hasCustomViewer(false), _hasCustomCamera(false)
+ _hasCustomViewer(false), _hasCustomCamera(false), _debugHUDEnabled(true), _debugHUD(NULL), _externalHUDs(false)
 {
     _winWidth = 800;
     _winHeight = 600;
@@ -170,8 +173,8 @@ void Core::run()
     
     if(!_hasCustomCamera)
     {
-        _mainCamera->setViewport(new osg::Viewport(0, 0, _winWidth, _winHeight));
         _keyboardHandler = new KeyboardHandler(_sceneRoot, _debugHUD, _pointLightGroup);
+        _mainCamera->setViewport(new osg::Viewport(0, 0, _winWidth, _winHeight));
         _viewer->setSceneData(_sceneRoot);
         _viewer->setUpViewInWindow(0, 0, _winWidth, _winHeight);
         _viewer->addEventHandler(_keyboardHandler);
@@ -422,6 +425,11 @@ void Core::configIndirectLightPass()
 
 void Core::setupHUDForPasses()
 {
+    if(_debugHUD.get() != NULL)
+    {
+        return;
+    }
+    
     osg::ref_ptr<osg::Group> hud(new osg::Group);
     _debugHUD = hud;
     
@@ -464,7 +472,11 @@ void Core::setupHUDForPasses()
     createTextureDisplayQuad(osg::Vec3(0.0, 0.0, 0),
                              _finalPass->getFinalPassTexture(),
                              _winWidth, _winHeight, 1, 1, true);
-    _sceneRoot->addChild(qTexF);
+    
+    
+    _externalHUDBlending->addChild(qTexF);
+    
+    
     //hud->addChild(qTexF);
     hud->addChild(qTexN);
     hud->addChild(qTexD);
@@ -506,6 +518,36 @@ void Core::configPasses()
     _screenPasses.push_back(_pointLightPass);
     _screenPasses.push_back(_finalPass);
     _screenPasses.push_back(_hdrPass);
+}
+
+void Core::addExternalHUD(osg::ref_ptr<osg::Node> hud)
+{
+    if(_externalHUDs == NULL && _externalHUDBlending == NULL)
+    {
+        // config hud & final pass blending group
+        _externalHUDBlending = new osg::Group;
+        osg::ref_ptr<osg::StateSet> ss = _externalHUDBlending->getOrCreateStateSet();
+        
+        osg::ref_ptr<osg::BlendFunc> blendFunc(new osg::BlendFunc);
+        osg::ref_ptr<osg::BlendEquation> blendEquation(new osg::BlendEquation);
+        blendFunc->setFunction(GL_ONE, GL_ONE);
+        blendEquation->setEquation(osg::BlendEquation::FUNC_ADD);
+        
+        // disable depth test for blending
+        ss->setMode( GL_DEPTH_TEST, osg::StateAttribute::OFF );
+        
+        // enable blending
+        ss->setMode(GL_BLEND, osg::StateAttribute::ON);
+        ss->setAttributeAndModes(blendFunc, osg::StateAttribute::ON);
+        ss->setAttributeAndModes(blendEquation, osg::StateAttribute::ON);
+        
+        _externalHUDs = new osg::Group;
+        _sceneRoot->addChild(_externalHUDBlending);
+    }
+    else
+    {
+        _externalHUDs->addChild(hud);
+    }
 }
 
 void Core::freeHeap()

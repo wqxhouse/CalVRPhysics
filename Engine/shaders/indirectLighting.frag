@@ -1,3 +1,5 @@
+// indirect lighting fragment shader
+
 #version 120
 uniform sampler2DRect u_sampleTexcoordTex;
 
@@ -13,7 +15,6 @@ varying vec4 v_lightPos;
 varying vec4 v_lightDir;
 
 varying vec4 v_lightFlux;
-// varying vec4 v_texcoord;
 varying vec4 v_center2D;
 
 uniform mat4 u_viewInverseMatrix;
@@ -23,39 +24,7 @@ uniform sampler2DRect u_viewNormalTex;
 
 uniform vec3 u_mainLightWorldPos;
 
-varying vec3 fluxDebug;
-
 const float distBias = 0.01f; // avoid singularity
-
-void try()
-{
-    vec2 rectCoord = gl_FragCoord.xy;
-    vec3 viewSpacePosition = texture2DRect(u_viewPositionTex, rectCoord).xyz;
-    vec3 viewSpaceNormal = texture2DRect(u_viewNormalTex, rectCoord).xyz;
-    vec3 worldSpacePosition = vec3(u_viewInverseMatrix * vec4(viewSpacePosition, 1)); //
-    vec3 worldSpaceNormal   = normalize(vec3(u_viewInverseMatrix * vec4(viewSpaceNormal, 0)));
-    
-    vec3 toVPL = v_lightPos.xyz - worldSpacePosition;
-    float distToVPLSqr = max( dot( toVPL, toVPL ), 0.2 );
-    
-    toVPL = normalize( toVPL );
-    
-    float len_Lj = distance(u_mainLightWorldPos, v_lightPos.xyz);
-    float len_Lj_sqr = len_Lj * len_Lj;
-    
-    vec3 norm_i = worldSpaceNormal;
-    vec3 norm_j = normalize(v_lightDir.xyz);
-    
-    float NiDotT = max( 0.0, dot(norm_i, toVPL) );
-    float NjDotT = max( 0.0, dot(norm_j, -toVPL) );
-    
-    float numer = len_Lj_sqr * NjDotT * NjDotT;
-    float denom = 1.5 * 4096 * distToVPLSqr + len_Lj_sqr;
-    
-    vec3 finalColor = ((20 * numer) / denom) * v_lightFlux.xyz;
-    gl_FragColor = vec4(finalColor, 1);
-    
-}
 
 void debug()
 {
@@ -90,46 +59,38 @@ void impl1()
     vec4 worldSpacePosition = u_viewInverseMatrix * vec4(viewSpacePosition, 1);
     vec4 worldSpaceNormal   = u_viewInverseMatrix * vec4(viewSpaceNormal, 0);
     
-    // compute lighting
+    // lighting parameters
     float l2, lR, cosThetaI, cosThetaJ, Fij, phongExp;
     
-    // R = vector from fragment to pixel light
+    // R = vector from worldPos of current pixel to vpl
     vec3 R  = v_lightPos.xyz - worldSpacePosition.xyz;
     
-    // squared length of R (needed again later)
+    // squared length of R
     l2 = dot( R, R );
     
     // normalize R
     R *= inversesqrt( l2 );
     
-    // distance attenuation (there's a global scene scaling factor "...WS_SIZE...")
-    //    lR = ( 1.0f / ( distBias + l2 * INV_WS_SIZE2_PI * 2 ) );
     lR = ( 1.0f / ( distBias + l2 ) );
     
-    cosThetaI = clamp( dot( v_lightDir.xyz, -R ), 0.0, 1.0);			// outgoing cosine
+    // out cos
+    cosThetaI = clamp( dot( v_lightDir.xyz, -R ), 0.0, 1.0);
     
     phongExp = v_lightDir.w;
     
+    // TODO: change this to physically based model
     if ( phongExp > 1.0f )
     {
-        // with a phong like energy attenuation and widening of the high intensity region
         cosThetaI = pow( cosThetaI, phongExp * l2 );
     }
     
-    // incoming cosine
+    // in cos
     cosThetaJ = clamp( dot( worldSpaceNormal.xyz,  R ), 0.0, 1.0 );
     
     // putting everything together
     Fij = cosThetaI * cosThetaJ * lR;
     
-    //     fade out
-//    vec2 t1 = v_center2D.xy * 0.5 + 0.5;;
-//        vec2 t2 = gl_FragCoord.xy * u_render_wh_inv;
-//        float fadeOutFactor = clamp( 2 - 6.667 * length( t1 - t2 ) / v_lightFlux.w, 0.0, 1.0 );
-//    
-//        Fij *= fadeOutFactor;
-    
-    result = v_lightFlux * Fij;								// transfer energy!
+    result = v_lightFlux * Fij;
     gl_FragColor = result;
 }
 

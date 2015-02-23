@@ -205,31 +205,7 @@ bool CustomTrackballManipulator::handleMouseWheelCVR( cvr::InteractionEvent *eve
 {
     // From cvr source UP = 1, DOWN = -1
     int scrollMotion = cvr::InteractionManager::instance()->getMouseWheel();
-    
-    // handle centering
-//    if( _flags & SET_CENTER_ON_WHEEL_FORWARD_MOVEMENT )
-//    {
-//        
-//        if( ((sm == GUIEventAdapter::SCROLL_DOWN && _wheelZoomFactor > 0.)) ||
-//           ((sm == GUIEventAdapter::SCROLL_UP   && _wheelZoomFactor < 0.)) )
-//        {
-//            
-//            if( getAnimationTime() <= 0. )
-//            {
-//                // center by mouse intersection (no animation)
-//                setCenterByMousePointerIntersection( ea, us );
-//            }
-//            else
-//            {
-//                // start new animation only if there is no animation in progress
-//                if( !isAnimating() )
-//                    startAnimationByMousePointerIntersection( ea, us );
-//                
-//            }
-//            
-//        }
-//    }
-    
+
     switch( scrollMotion )
     {
             // mouse scroll up event
