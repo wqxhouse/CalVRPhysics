@@ -1,2 +1,2 @@
 // fxaa fragment shader
-#version 120
+#version 120#extension GL_ARB_texture_rectangle : enable

@@ -1,5 +1,6 @@
 // toneMapping frag shader
 #version 120
+#extension GL_ARB_texture_rectangle : enable
 uniform sampler2DRect u_screenTex;
 float A = 0.15;
 float B = 0.50;
