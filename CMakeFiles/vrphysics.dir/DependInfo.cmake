@@ -1,56 +1,56 @@
 # The set of languages for which implicit dependencies are needed:
-set(CMAKE_DEPENDS_LANGUAGES
+SET(CMAKE_DEPENDS_LANGUAGES
   "CXX"
   )
 # The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/loader/CVRKeyboardHandler.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CVRKeyboardHandler.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/loader/CustomTrackballManipulator.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CustomTrackballManipulator.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/loader/CustomVCoordFrameCB.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/CustomVCoordFrameCB.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/loader/PhysicsLabZW.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/PhysicsLabZW.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/loader/Scene.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/loader/Scene.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/AssetDB.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/AssetDB.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/Core.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Core.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/DirectionalLight.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLight.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/DirectionalLightCallback.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightCallback.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/DirectionalLightGroup.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightGroup.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/DirectionalLightingPass.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightingPass.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/FinalPass.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/FinalPass.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/GeometryPass.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/GeometryPass.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/HDRPass.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/HDRPass.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/ImportanceSamplingPass.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ImportanceSamplingPass.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/IndirectLightingPass.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/IndirectLightingPass.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/KeyboardHandler.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/KeyboardHandler.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/LightCallback.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightCallback.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/LightGroup.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightGroup.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/LightGroupAnimationCallback.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightGroupAnimationCallback.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/LightTrackBallManipulator.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightTrackBallManipulator.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/LightingPass.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/LightingPass.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/Material.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Material.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/PointLight.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/PointLight.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/SSAOPass.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SSAOPass.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/SceneEventCallback.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SceneEventCallback.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/ScreenPass.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ScreenPass.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/ShadowCallback.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ShadowCallback.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/ShadowGroup.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/ShadowGroup.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/SphereSegment.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SphereSegment.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/SpotLight.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SpotLight.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/SpotLightGroup.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/SpotLightGroup.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/Utils.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/Utils.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/Engine/src/VPLGroup.cpp" "/Users/Wqxhouse-Mac/vrproject/CVRPlugins/calit2/vrphysics/CMakeFiles/vrphysics.dir/Engine/src/VPLGroup.cpp.o"
+SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/loader/CVRKeyboardHandler.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/loader/CVRKeyboardHandler.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/loader/CustomTrackballManipulator.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/loader/CustomTrackballManipulator.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/loader/CustomVCoordFrameCB.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/loader/CustomVCoordFrameCB.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/loader/PhysicsLabZW.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/loader/PhysicsLabZW.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/loader/Scene.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/loader/Scene.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/AssetDB.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/AssetDB.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/Core.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/Core.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/DirectionalLight.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLight.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/DirectionalLightCallback.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightCallback.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/DirectionalLightGroup.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightGroup.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/DirectionalLightingPass.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/DirectionalLightingPass.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/FinalPass.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/FinalPass.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/GeometryPass.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/GeometryPass.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/HDRPass.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/HDRPass.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/ImportanceSamplingPass.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/ImportanceSamplingPass.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/IndirectLightingPass.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/IndirectLightingPass.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/KeyboardHandler.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/KeyboardHandler.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/LightCallback.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/LightCallback.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/LightGroup.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/LightGroup.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/LightGroupAnimationCallback.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/LightGroupAnimationCallback.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/LightTrackBallManipulator.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/LightTrackBallManipulator.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/LightingPass.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/LightingPass.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/Material.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/Material.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/PointLight.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/PointLight.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/SSAOPass.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/SSAOPass.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/SceneEventCallback.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/SceneEventCallback.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/ScreenPass.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/ScreenPass.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/ShadowCallback.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/ShadowCallback.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/ShadowGroup.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/ShadowGroup.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/SphereSegment.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/SphereSegment.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/SpotLight.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/SpotLight.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/SpotLightGroup.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/SpotLightGroup.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/Utils.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/Utils.cpp.o"
+  "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/Engine/src/VPLGroup.cpp" "/home/zowu/CVRPlugins/calit2/PhysicsLabZW/CMakeFiles/vrphysics.dir/Engine/src/VPLGroup.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "Clang")
+SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+SET(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/Users/Wqxhouse-Mac/vrproject/calvr/include"
+SET(CMAKE_C_TARGET_INCLUDE_PATH
+  "/home/calvr/CalVR/include"
   "common"
-  "/Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include"
+  "/home/calvr/CalVR/extern_libs/include"
   )
-set(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
-set(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
-set(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

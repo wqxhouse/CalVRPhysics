@@ -1,4 +1,4 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/vrphysics.dir/Engine/loader/CVRKeyboardHandler.cpp.o"
   "CMakeFiles/vrphysics.dir/Engine/loader/PhysicsLabZW.cpp.o"
   "CMakeFiles/vrphysics.dir/Engine/loader/CustomTrackballManipulator.cpp.o"
@@ -33,11 +33,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/vrphysics.dir/Engine/src/LightGroup.cpp.o"
   "CMakeFiles/vrphysics.dir/Engine/src/VPLGroup.cpp.o"
   "CMakeFiles/vrphysics.dir/Engine/src/LightGroupAnimationCallback.cpp.o"
-  "/Users/Wqxhouse-Mac/vrproject/calvr/lib/calvr-plugins/libvrphysics.pdb"
-  "/Users/Wqxhouse-Mac/vrproject/calvr/lib/calvr-plugins/libvrphysics.dylib"
+  "/home/calvr/CalVR/lib/calvr-plugins/libvrphysics.pdb"
+  "/home/calvr/CalVR/lib/calvr-plugins/libvrphysics.so"
+  "/home/calvr/CalVR/lib/calvr-plugins/libvrphysics.pdb"
+  "CMakeFiles/CMakeRelink.dir/libvrphysics.so"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/vrphysics.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/vrphysics.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

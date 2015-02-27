@@ -1,4 +1,4 @@
-SET(LIB_NAME vrphysics)
+SET(LIB_NAME PhysicsLabZW)
 SET(PLUGIN_HEADERS
 	Engine/loader/CVRKeyboardHandler.h		
 	Engine/loader/PhysicsLabZW.h
