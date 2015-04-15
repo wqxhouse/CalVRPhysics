@@ -129,4 +129,7 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Geode \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/ImageProcessor \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/BlendFunc \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/BlendEquation
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/BlendEquation \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Depth \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/PolygonMode \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/CullFace

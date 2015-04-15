@@ -10,14 +10,12 @@
 #include <osg/Depth>
 
 // protected
-GeometryPass::GeometryPass(osg::Camera *mainCamera, AssetDB *assetDB)
-: ScreenPass(mainCamera), _assetDB(assetDB)
+GeometryPass::GeometryPass(osg::Camera *mainCamera, AssetDB *assetDB, osg::Group *geomRootNode)
+: ScreenPass(mainCamera), _assetDB(assetDB), _geomRootNode(geomRootNode)
 {
     osg::Matrix projMatrix = mainCamera->getProjectionMatrix();
     float dummy;
     projMatrix.getFrustum(dummy, dummy, dummy, dummy, _nearPlaneDist, _farPlaneDist);
-    
-    _worldObjects = _assetDB->getGeomRoot();
     
     //ScreenPass::setShader("gbuffer.vert", "gbuffer.frag");
     _gbuffer_notex_shader = addShader("gbuffer.vert", "gbuffer.frag");
@@ -32,18 +30,18 @@ GeometryPass::GeometryPass(osg::Camera *mainCamera, AssetDB *assetDB)
     _rttCamera->attach(osg::Camera::COLOR_BUFFER0, getAlbedoOutTexture());
     _rttCamera->attach(osg::Camera::COLOR_BUFFER1, getNormalDepthOutTexture());
     _rttCamera->attach(osg::Camera::COLOR_BUFFER2, getPositionOutTexure());
-   
+    
     configSharedDepthStencilTexture();
     _rttCamera->attach(osg::Camera::PACKED_DEPTH_STENCIL_BUFFER, _sharedDepthStencilTex);
     
     osg::ref_ptr<osg::Group> worldObjectGeomPassNode(new osg::Group);
-    worldObjectGeomPassNode->addChild(_worldObjects);
-    osg::ref_ptr<osg::StateSet> worldObjectGeomPassSS = worldObjectGeomPassNode->getOrCreateStateSet();
+    worldObjectGeomPassNode->addChild(_geomRootNode);
+    auto worldObjectGeomPassSS = worldObjectGeomPassNode->getOrCreateStateSet();
     worldObjectGeomPassSS->setMode(GL_DEPTH_TEST, osg::StateAttribute::ON);
     osg::ref_ptr<osg::Depth> depth(new osg::Depth);
     depth->setWriteMask(true);
-//    depth->setZNear(0.0);
-//    depth->setZFar(1.0);
+    //    depth->setZNear(0.0);
+    //    depth->setZFar(1.0);
     worldObjectGeomPassSS->setAttributeAndModes(depth, osg::StateAttribute::ON);
     
     _rttCamera->addChild(worldObjectGeomPassNode);
@@ -67,7 +65,7 @@ void GeometryPass::configSharedDepthStencilTexture()
 
 void GeometryPass::configureStateSet()
 {
-    //    _stateSet->setAttributeAndModes(getShader(_gbuffer_notex_shader), osg::StateAttribute::ON | osg::StateAttribute::OVERRIDE);
+    //  _stateSet->setAttributeAndModes(getShader(_gbuffer_notex_shader), osg::StateAttribute::ON | osg::StateAttribute::OVERRIDE);
     _stateSet->setAttributeAndModes(getShader(_gbuffer_notex_shader), osg::StateAttribute::ON );
     _stateSet->addUniform(new osg::Uniform("u_nearDistance", _nearPlaneDist));
     _stateSet->addUniform(new osg::Uniform("u_farDistance", _farPlaneDist));
@@ -80,10 +78,10 @@ void GeometryPass::configureStateSet()
     
     // attach shader to objects other than light geom
     // TODO: consider the shading of the flying light object, currently overriden by _stateSet
-    std::vector<std::pair<osg::Node *, Material *> > nodeMaterialPairs = _assetDB->getGeometryNodesAndMaterials();
+    auto nodeMaterialPairs = _assetDB->getGeometryNodesAndMaterials();
     for(unsigned long i = 0; i < nodeMaterialPairs.size(); i++)
     {
-        std::pair<osg::Node *, Material *> &p = nodeMaterialPairs[i];
+        auto p = nodeMaterialPairs[i];
         osg::Node *node = p.first;
         Material *mat = p.second;
         if(mat->hasTexture())

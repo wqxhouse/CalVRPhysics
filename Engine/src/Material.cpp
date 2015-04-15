@@ -10,7 +10,7 @@
 
 
 Material::Material(osg::Node *owner, osg::Texture2D *albedo/* = NULL */ )
-:  _owner(owner), _hasTexture(false)
+: _hasTexture(false), _owner(owner)
 {
     if(albedo != NULL)
     {

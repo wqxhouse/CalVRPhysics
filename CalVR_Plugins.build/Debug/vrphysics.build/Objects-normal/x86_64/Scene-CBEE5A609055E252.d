@@ -138,5 +138,6 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/SharedStateManager \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/ImageProcessor \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/../src/DirectionalLight.h \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/../src/FrustumData.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/../src/DirectionalLightGroup.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/loader/../src/LightGroup.h

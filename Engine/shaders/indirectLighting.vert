@@ -1,5 +1,3 @@
-// indirect lighting vertex shader
-
 #version 120
 #extension GL_EXT_gpu_shader4 : enable
 
@@ -13,6 +11,8 @@ varying vec4 v_lightFlux;
 varying vec4 v_texcoord; // for deferred shading buffer
 varying vec4 v_splatCenter; // for smooth fade outA
 varying vec4 v_center2D;
+
+varying float v_radius;
 
 float Ilow = 0.00025f;
 
@@ -66,6 +66,8 @@ uniform vec2 u_render_wh_inv;
 uniform vec2 u_rsm_wh;
 uniform vec3 u_camPos;
 
+varying vec3 fluxDebug;
+
 // varying vec3 v_samplePos;
 
 // uniform vec3 u_arr[256];
@@ -77,29 +79,42 @@ void main()
     // get sample position
     vec2 sampleTextureCoord = texture2DRect(u_sampleTexcoordTex, vec2(gl_InstanceID, 0)).st;
     samplePos = texture2D( u_samplePosTex, sampleTextureCoord ).xyz;
-    
+
     // and use it to retrieve the data from the RSM
     // position + phong exponent
     vec2 sampleRectCoord = samplePos.st * u_rsm_wh;
     v_lightPos = texture2DRect( u_worldPosTex, sampleRectCoord );
-    
-    // xyz -> vpl light direction, w -> packed radiant flux
+
+    // main light direction + squeezed flux
     v_lightDir = texture2DRect( u_lightDirTex, sampleRectCoord );
-    v_lightFlux.xyz = decodeFlux( v_lightDir.w );
+
+    // unpack flux
+     v_lightFlux.xyz = decodeFlux( v_lightDir.w );
+    //v_lightFlux.xyz = float2color(v_lightDir.w);
+    
+    fluxDebug = v_lightFlux.xyz;
     
     v_lightFlux.w   = 0.0f;
     v_lightFlux    *= u_scaleIndirect;
-    //
-    // brightness of vpl
+    
+    
+//    vec4 offset = vec4(u_arr[gl_InstanceID], 0);
+//    vec4 vert = gl_Vertex + offset;
+//    gl_Position = gl_ModelViewProjectionMatrix * vert;
+//
+    // brightness of the pixel light source (RGB luminance)
     float I0 = dot( vec3( 0.3, 0.59, 0.11 ), v_lightFlux.xyz );
     
-    // glossiness
-    // TODO: change to pbr model later
+    // glossiness of the pixel light
     float n = v_lightPos.w;
     v_lightDir.w = n;
     
-    // ellipsoid for tighter bound, adopted from shader x5
+    // compute ellipsoid (see ShaderX5 for details)
+    
+    // center
     float c_n = pow( n / ( n + 2.0f ), 0.25f * ( n + 2 ) );
+    
+    // height/width
     float h_n = pow( c_n, n / ( n + 2.0f ) ) * sqrt( 1.0f - pow( c_n, 4.0f / ( n + 2 ) ) );
     float w_n = max( c_n, 1.0f - c_n );
     
@@ -109,8 +124,12 @@ void main()
     vec3 bitangent = cross( lightDir, tangent );
     tangent   = cross( lightDir, bitangent );
     
-    // vpl size
-    float size = sqrt( I0 / Ilow ) * 0.4f;
+    // estimate pixel light size
+    //float size = sqrt( I0 / Ilow ) * 0.4f;
+//    float size = sqrt( I0 / Ilow ) * 0.4f * 2.0;
+    float size = sqrt( I0 / Ilow );
+    v_radius = size;
+    
     
     // scale tangent space by ellipsoid approximation
     lightDir  *= w_n;
@@ -118,7 +137,7 @@ void main()
     bitangent *= h_n;
     
     // and transform vertex of bounding geometry
-    vec4 worldPos;
+    vec4 worldPos = vec4(0, 0, 0, 1);
     
     worldPos.xyz  = gl_Vertex.y * lightDir.xyz;
     worldPos.xyz += gl_Vertex.x * tangent.xyz;
@@ -134,7 +153,17 @@ void main()
     
     // compute screen space position for deferred shading
     vec4 pos2D = clipPosition;
-    gl_Position = clipPosition;
     
-    //    gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+//    // smooth fade out
+//    // screen space size of the splat
+//    v_lightFlux.w = size + max( w_n, h_n );
+//    v_lightFlux.w /= length( v_lightPos.xyz - u_camPos );
+//    
+//    // and the screen space position of its center
+//    v_center2D = u_matVP * vec4( v_lightPos.xyz + size * c_n * lightDir.xyz, 1.0f );
+    
+    gl_Position = clipPosition;
+
+//    gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+    
 }

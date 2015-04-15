@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <osgDB/ReadFile>
-#include <osgViewer/Viewer>
+#include <osgViewer/viewer>
 #include <osg/Camera>
 #include <osg/PolygonMode>
 #include <osg/TextureCubeMap>
@@ -26,10 +26,13 @@
 #include "FinalPass.h"
 #include "HDRPass.h"
 #include "IndirectLightingPass.h"
+// #include "FrustumData.h"
 
 #include "ImportanceSamplingPass.h"
 #include "AssetDB.h"
 #include "KeyboardHandler.h"
+
+#include <osg/ComputeBoundsVisitor>
 
 class LightTrackBallManipulator;
 class Core
@@ -59,48 +62,11 @@ public:
         _handleGeometries = handleGeometries;
     }
     
-    void setCustomViewer(osgViewer::Viewer *viewer);
-    
-    inline void setCustomMainCamera(osg::ref_ptr<osg::Camera> mainCamera)
+    inline osg::ref_ptr<osgViewer::Viewer> getViewer()
     {
-        _hasCustomCamera = true;
-        _mainCamera = mainCamera;
+        return _viewer;
     }
     
-    inline osg::ref_ptr<osg::Group> getSceneRoot()
-    {
-        return _sceneRoot;
-    }
-    
-    inline osg::ref_ptr<osg::Group> getDebugHUD()
-    {
-        return _debugHUD;
-    }
-    
-    inline void enableDebugHUD()
-    {
-        if(!_debugHUDEnabled)
-        {
-            _sceneRoot->addChild(_debugHUD);
-            _debugHUDEnabled = true;
-        }
-    }
-    
-    inline void disableDebugHUD()
-    {
-        if(_debugHUDEnabled)
-        {
-            _sceneRoot->removeChild(_debugHUD);
-            _debugHUDEnabled = false;
-        }
-    }
-    
-    inline void toggleDebugHUD()
-    {
-        _debugHUDEnabled ? disableDebugHUD() : enableDebugHUD();
-    }
-   
-    void addExternalHUD(osg::ref_ptr<osg::Node> hud);
     void run();
     
 private:
@@ -130,6 +96,9 @@ private:
     osg::ref_ptr<osg::Texture2D> createTexture2DImage(const char *imageName);
     osg::ref_ptr<osg::Geode> createTexturedQuad(int _TextureWidth, int _TextureHeight);
     
+    //    DirectionalLightGroup *addDirectionalLights();
+    //    LightGroup *addPointLights();
+    //
     void configGeomPass();
     void configRSMPass();
     void configDirectionalLightPass();
@@ -173,9 +142,6 @@ private:
     
     osg::ref_ptr<osg::Camera> _mainCamera;
     osg::ref_ptr<osg::Group> _debugHUD;
-    osg::ref_ptr<osg::Group> _externalHUDs;
-    osg::ref_ptr<osg::Group> _externalHUDBlending; // blend with final pass
-    
     osg::ref_ptr<KeyboardHandler> _keyboardHandler;
     
     AssetDB *_assetDB;
@@ -189,11 +155,19 @@ private:
     osg::ref_ptr<osgViewer::Viewer> _viewer;
     
     osg::ref_ptr<LightTrackBallManipulator> _lightTrackBallManipulator;
+    osg::ComputeBoundsVisitor _computeBound;
+    osg::BoundingBox _sceneAABB;
     
-    bool _hasCustomViewer;
-    bool _hasCustomCamera;
+};
+
+class CameraUpdateCallback : public osg::NodeCallback
+{
+public:
+    CameraUpdateCallback(osg::Camera *mainCamera) : _mainCamera(mainCamera) {};
+    virtual void operator()(osg::Node* node, osg::NodeVisitor* nv);
     
-    bool _debugHUDEnabled;
+private:
+    osg::ref_ptr<osg::Camera> _mainCamera;
 };
 
 #endif /* defined(__vrphysics__Core__) */

@@ -13,8 +13,8 @@
 
 #include "DirectionalLight.h"
 
-IndirectLightingPass::IndirectLightingPass(osg::Camera *mainCamera, ImportanceSamplingPass *impPass, osg::TextureRectangle *lightDirTex, osg::TextureRectangle *worldPosTex, osg::TextureRectangle *viewPositionTex, osg::TextureRectangle *viewNormalTex, osg::Texture2D *depthBufferTex, DirectionalLight *mainLight)
-: ScreenPass(mainCamera), _importanceSamplingEnabled(true), _impPass(impPass)
+IndirectLightingPass::IndirectLightingPass(osg::Camera *mainCamera, ImportanceSamplingPass *impPass, osg::TextureRectangle *lightDirTex, osg::TextureRectangle *worldPosTex, osg::TextureRectangle *viewPositionTex, osg::TextureRectangle *viewNormalTex, osg::Texture2D *depthBufferTex, DirectionalLight *mainLight, osg::Texture2D *sharedDepthBuffer)
+: ScreenPass(mainCamera),  _impPass(impPass)
 {
     // load sample tex
     // TODO: support multiple lights later
@@ -27,7 +27,8 @@ IndirectLightingPass::IndirectLightingPass(osg::Camera *mainCamera, ImportanceSa
 //    }
    
     _mainLight = mainLight;
-    
+   
+    _sharedDepthBufferTex = sharedDepthBuffer;
     _impSampleTex = impPass->getImportanceSampleTexture(0);
     _depthBufferTex = depthBufferTex;
     _splats = impPass->getSplatsSizeRow();
@@ -35,7 +36,7 @@ IndirectLightingPass::IndirectLightingPass(osg::Camera *mainCamera, ImportanceSa
     _rsmWidth = _impPass->getRSMWidth();
     _rsmHeight = _impPass->getRSMHeight();
     
-    _splatSampleNum = 32;
+    _splatSampleNum = 16;
     createSampleTexcoordMap();
     
     // normal sample pattern, used when importance sampling is disabled
@@ -53,18 +54,33 @@ IndirectLightingPass::IndirectLightingPass(osg::Camera *mainCamera, ImportanceSa
     _vplGroup = new VPLGroup;
     _vplGroup->setNumVpls(_splatSampleNum * _splatSampleNum);
     
-    _rttCamera->addChild(_vplGroup->getLightSphereGeode());
-//     _rttCamera->addChild(createTexturedQuad());
-    _rootGroup->addChild(_rttCamera);
-    
-    // config camera
-//    _rttCamera->attach(osg::Camera::PACKED_DEPTH_STENCIL_BUFFER, _depthBufferTex);
-    _rttCamera->attach(osg::Camera::COLOR_BUFFER0, getOutputTexture(_out_indirectLightingTex_id));
-//    _rttCamera->setReferenceFrame(osg::Camera::ABSOLUTE_RF);
-//    _rttCamera->setProjectionMatrix(osg::Matrix::ortho2D(0, 1, 0, 1));
     setupCamera();
     
     configureStateSet();
+}
+
+void IndirectLightingPass::setupCamera()
+{
+    _rttCamera->addChild(_vplGroup->getLightSphereGeode());
+    //     _rttCamera->addChild(createTexturedQuad());
+    _rootGroup->addChild(_rttCamera);
+    
+    // config camera
+    // config shared depth buffer and stencil
+    _rttCamera->setClearStencil(0);
+    _rttCamera->setClearMask(GL_COLOR_BUFFER_BIT);
+//    _rttCamera->setClearMask(GL_COLOR_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+//    _rttCamera->setClearMask(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    _rttCamera->attach(osg::Camera::PACKED_DEPTH_STENCIL_BUFFER, _sharedDepthBufferTex);
+    
+    _rttCamera->setClearColor(osg::Vec4(0.0f, 0.0f, 0.0f,1.0f));
+    
+    // viewport
+    _rttCamera->setViewport(0, 0, _screenWidth, _screenHeight);
+    _rttCamera->setRenderOrder(osg::Camera::PRE_RENDER);
+    _rttCamera->setRenderTargetImplementation(osg::Camera::FRAME_BUFFER_OBJECT);
+    
+    _rttCamera->attach(osg::Camera::COLOR_BUFFER0, getOutputTexture(_out_indirectLightingTex_id));
 }
 
 IndirectLightingPass::~IndirectLightingPass()
@@ -115,9 +131,14 @@ int IndirectLightingPass::addOutTexture()
     osg::ref_ptr<osg::TextureRectangle> tex = new osg::TextureRectangle;
     
     tex->setTextureSize(_screenWidth, _screenHeight);
-    tex->setSourceType(GL_UNSIGNED_BYTE); // TODO: consider HDR cases
+//    tex->setSourceType(GL_UNSIGNED_BYTE); // TODO: consider HDR cases
+//    tex->setSourceFormat(GL_RGBA);
+//    tex->setInternalFormat(GL_RGBA);
+    
+    tex->setSourceType(GL_FLOAT); // TODO: consider HDR cases
     tex->setSourceFormat(GL_RGBA);
-    tex->setInternalFormat(GL_RGBA);
+    tex->setInternalFormat(GL_RGBA16F_ARB);
+    
     
     tex->setFilter(osg::TextureRectangle::MIN_FILTER,osg::TextureRectangle::LINEAR);
     tex->setFilter(osg::TextureRectangle::MAG_FILTER,osg::TextureRectangle::LINEAR);
@@ -131,25 +152,6 @@ void IndirectLightingPass::configureStateSet()
 {
     _stateSet = _rttCamera->getOrCreateStateSet();
     _stateSet->setAttributeAndModes(getShader(_indirectLightShader), osg::StateAttribute::ON | osg::StateAttribute::OVERRIDE);
-    
-//    uniform sampler2D u_samplePosTex;
-//    uniform sampler2DRect u_worldPosTex;
-//    uniform sampler2DRect u_lightDirTex;
-//    
-//    uniform mat4 u_matVP;
-//    uniform float u_scaleIndirect;
-//    uniform vec2 u_render_wh;
-//    uniform vec3 u_camPos;
-    
-//    float a[6][8];
-//    for(int i = 0; i < 6; i++)
-//    {
-//        for(int j = 0; j < 8; j++)
-//        {
-//            int index = i * 8 + j;
-//            a[i][j] = (float)index / (float)(8 * 6);
-//        }
-//    }
     
     _stateSet->addUniform(new osg::Uniform("u_samplePosTex", 0));
     if(_impPass->isImportanceSampleEnabled())
@@ -170,7 +172,7 @@ void IndirectLightingPass::configureStateSet()
     _stateSet->addUniform(new osg::Uniform("u_viewInverseMatrix", osg::Matrixf(_mainCamera->getInverseViewMatrix())));
     
     // hard coded defaults
-    float indirectFactor = 0.125f;
+    float indirectFactor = 0.25f;
     float indirectSample = _splatSampleNum * _splatSampleNum;
     float indirectScale = indirectFactor * 256.0f / (float)indirectSample;
     
@@ -239,6 +241,9 @@ osg::Vec3 IndirectLightingCallback::getCameraPosition()
     osg::Vec3 eye;
     osg::Vec3 dummy;
     mat.getLookAt(eye, dummy, dummy);
+    
+    // printf("%f, %f, %f\n", eye.x(), eye.y(), eye.z());
+    
     return eye;
 }
 
@@ -248,5 +253,6 @@ osg::Vec3 IndirectLightingPass::getCameraPosition()
     osg::Vec3 eye;
     osg::Vec3 dummy;
     mat.getLookAt(eye, dummy, dummy);
+    
     return eye;
 }

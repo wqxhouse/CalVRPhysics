@@ -189,9 +189,20 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/PositionAttitudeTransform \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/AnimationPath \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/DirectionalLight.h \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/FrustumData.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/DirectionalLightingPass.h \
-  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/ShadowGroup.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/DirectionalLightGroup.h \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/ShadowGroup.h \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ParallelSplitShadowMap \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Material \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Depth \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ClipPlane \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ShadowTechnique \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/TexGenNode \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/TexGen \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/Export \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ShadowedScene \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ShadowSettings \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/LightingPass.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/LightGroup.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/SSAOPass.h \
@@ -200,9 +211,11 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/IndirectLightingPass.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/ImportanceSamplingPass.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/KeyboardHandler.h \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/TrackballManipulator \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/OrbitManipulator \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ComputeBoundsVisitor \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/CustomFirstPersonManipulator.h \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/FirstPersonManipulator \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/StandardManipulator \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/LightTrackBallManipulator.h \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/BlendFunc \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/BlendEquation
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/TrackballManipulator \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgGA/OrbitManipulator \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/Skybox.h

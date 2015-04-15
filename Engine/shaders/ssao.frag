@@ -105,3 +105,4 @@ void main()
     
     gl_FragColor = vec4(occlusion, occlusion, occlusion, 1.0);
 }
+

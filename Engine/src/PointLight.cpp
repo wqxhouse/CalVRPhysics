@@ -10,7 +10,7 @@
 #include <osgDB/ReadFile>
 
 PointLight::PointLight() :
-intensity(1.0f)
+intensity(1.0f), _animated(false)
 {
     genGeometry();
     
@@ -65,6 +65,4 @@ float PointLight::calcRadiusByAttenuation()
 }
 
 int PointLight::_highest_id;
-
-// TODO: make a resource manager to preload files so that io error can be notified. i.e lightSphere.obj not found
 osg::ref_ptr<osg::Geode> PointLight::_s_lightSphere = osgDB::readNodeFile("lightSphere.obj")->asGroup()->getChild(0)->asGeode();

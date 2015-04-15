@@ -103,6 +103,7 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ShapeDrawable \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/MatrixTransform \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Geometry \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/FrustumData.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/Utils.h \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/PositionAttitudeTransform \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/AnimationPath \

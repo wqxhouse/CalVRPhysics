@@ -15,9 +15,8 @@
 #include <osg/Group>
 
 #include "ScreenPass.h"
-#include "ShadowGroup.h"
-
 #include "DirectionalLightGroup.h"
+#include "ShadowGroup.h"
 
 class DirectionalLightingPass : public ScreenPass
 {

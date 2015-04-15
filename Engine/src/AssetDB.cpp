@@ -331,3 +331,4 @@ void Assets::addGeometryWithFile(const std::string &fileURL)
     _assetDB->addGeometryWithFile(fileURL);
 }
 
+

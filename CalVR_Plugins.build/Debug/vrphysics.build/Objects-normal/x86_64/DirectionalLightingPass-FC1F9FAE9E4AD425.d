@@ -133,10 +133,34 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/OutputStream \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/SharedStateManager \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/ImageProcessor \
-  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/ShadowGroup.h \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/DirectionalLightGroup.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/DirectionalLight.h \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ShapeDrawable \
-  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/DirectionalLightGroup.h \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/FrustumData.h \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/ShadowGroup.h \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ParallelSplitShadowMap \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Material \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Depth \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ClipPlane \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ShadowTechnique \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/TexGenNode \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/TexGen \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/CullVisitor \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/CullStack \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/CullingSet \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ShadowVolumeOccluder \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ConvexPlanarOccluder \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ConvexPlanarPolygon \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/StateGraph \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/RenderLeaf \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/Export \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/RenderStage \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/FrameBufferObject \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/RenderBin \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/PositionalStateContainer \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/Export \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ShadowedScene \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ShadowSettings \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/BlendEquation \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/BlendFunc \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/DirectionalLightCallback.h \

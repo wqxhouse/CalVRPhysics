@@ -103,6 +103,64 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ShapeDrawable \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/MatrixTransform \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Geometry \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/FrustumData.h \
   /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/ShadowGroup.h \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Texture2D \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/TextureRectangle
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/TextureRectangle \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ParallelSplitShadowMap \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Material \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Depth \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ClipPlane \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ShadowTechnique \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/TexGenNode \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/TexGen \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/CullVisitor \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/CullStack \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/CullingSet \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ShadowVolumeOccluder \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ConvexPlanarOccluder \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ConvexPlanarPolygon \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/StateGraph \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/RenderLeaf \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/Export \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/RenderStage \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/FrameBufferObject \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/RenderBin \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgUtil/PositionalStateContainer \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/Export \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ShadowedScene \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgShadow/ShadowSettings \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/LightGroupAnimationCallback.h \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/LightGroup.h \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/PointLight.h \
+  /Users/Wqxhouse-Mac/vrproject/CVRPlugins_xcode/calit2/vrphysics/Engine/src/Utils.h \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/PositionAttitudeTransform \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/AnimationPath \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/ReadFile \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ArgumentParser \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ApplicationUsage \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/Export \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/Registry \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/OpenThreads/ReentrantMutex \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/KdTree \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/DynamicLibrary \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/ReaderWriter \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/AuthenticationMap \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/Options \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/Callbacks \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/FileCache \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/DatabaseRevisions \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/ObserverNodePath \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/DotOsgWrapper \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/Input \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/Output \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/fstream \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/ObjectWrapper \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/Serializer \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/InputStream \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osg/Endian \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/StreamOperator \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/DataTypes \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/OutputStream \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/SharedStateManager \
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/ImageProcessor
