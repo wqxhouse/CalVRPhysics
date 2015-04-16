@@ -25,6 +25,7 @@ void main(void)
     sum += texture2DRect(u_texture, vec2(vTexCoord.x, vTexCoord.y + 4.0*blurSize)) * 0.05;
     
     gl_FragColor = sum;
+//    gl_FragColor = vec4(1,0, 0, 1);
 //    vec4 s = texture2DRect(u_texture, gl_FragCoord.xy);
 //    gl_FragColor = s;
     // gl_FragColor = vec4(0, 1, 0, 1);

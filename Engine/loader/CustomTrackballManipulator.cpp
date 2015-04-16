@@ -28,8 +28,9 @@ void CustomTrackballManipulator::configDefaultOSGProjectionMatrix()
     double width = osg::DisplaySettings::instance()->getScreenWidth();
     double distance = osg::DisplaySettings::instance()->getScreenDistance();
     double vfov = osg::RadiansToDegrees(atan2(height/2.0f,distance)*2.0);
-    
-    _defaultOSGProjectionMatrix.makePerspective(vfov, width/height, 1.0f,10000.0f);
+   
+    // ! Far plane is very important. Too large will disable the rendering...
+    _defaultOSGProjectionMatrix.makePerspective(vfov, width/height, 1.0f, 50.0f);
 }
 
 void CustomTrackballManipulator::updateCamera(osg::Camera &camera)

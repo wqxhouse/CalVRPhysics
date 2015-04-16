@@ -104,5 +104,6 @@ void main()
     occlusion = 1.0 - clamp(occlusion, 0.0, 1.0);
     
     gl_FragColor = vec4(occlusion, occlusion, occlusion, 1.0);
+    //gl_FragColor = vec4(srcPosition, 1.0);
 }
 

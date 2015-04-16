@@ -13,6 +13,9 @@
 
 #include "Skybox.h"
 
+#include <osg/BlendFunc>
+#include <osg/BlendEquation>
+
 void CameraUpdateCallback::operator()(osg::Node *node, osg::NodeVisitor *nv)
 {
     float l, r, b, t, n, f;
@@ -137,11 +140,7 @@ Core::Core()
     _geometryGroup->addChild(_customGeometryGroup);
     _geometryGroup->addChild(_lightVisualizeGeometryGroup);
     
-    _shadowGroup = new ShadowGroup(_mainCamera, _geometryGroup, _sceneAABB);
-    _sceneRoot->addChild(_shadowGroup->getShadowGroupRoot());
-    
-    _dirLightGroup = new DirectionalLightGroup(_shadowGroup);
-    _pointLightGroup = new LightGroup;
+
 }
 
 Core::~Core()
@@ -153,20 +152,40 @@ void Core::run()
 {
     _mainCamera->setViewport(new osg::Viewport(0, 0, _winWidth, _winHeight));
     
+    // need to set here instead of constructor. For calvr, _mainCamera is only valid after set as external cam
+    _shadowGroup = new ShadowGroup(_mainCamera, _geometryGroup, _sceneAABB);
+    _sceneRoot->addChild(_shadowGroup->getShadowGroupRoot());
+    
+    _dirLightGroup = new DirectionalLightGroup(_shadowGroup);
+    _pointLightGroup = new LightGroup;
+    
     // order coupling
     configGeometries();
     configLights();
     configPasses();
     
-    _keyboardHandler = new KeyboardHandler(_sceneRoot, _debugHUD, _pointLightGroup, _viewer);
-    _viewer->setSceneData(_sceneRoot);
-    _viewer->setUpViewInWindow(0, 0, _winWidth, _winHeight);
-    _viewer->addEventHandler(_keyboardHandler);
-
-//    _viewer->setCameraManipulator(new CustomFirstPersonManipulator);
-    _mainCamera->setUpdateCallback(new CameraUpdateCallback(_mainCamera));
     
-    _viewer->run();
+    if(!_hasCustomCamera)
+    {
+        _keyboardHandler = new KeyboardHandler(_sceneRoot, _debugHUD, _pointLightGroup, _viewer);
+        _mainCamera->setViewport(new osg::Viewport(0, 0, _winWidth, _winHeight));
+        _viewer->setSceneData(_sceneRoot);
+        _viewer->setUpViewInWindow(0, 0, _winWidth, _winHeight);
+        _viewer->addEventHandler(_keyboardHandler);
+        
+        _viewer->run();
+    }
+    
+//    _keyboardHandler = new KeyboardHandler(_sceneRoot, _debugHUD, _pointLightGroup, _viewer);
+//    _viewer->setSceneData(_sceneRoot);
+//    _viewer->setUpViewInWindow(0, 0, _winWidth, _winHeight);
+//    _viewer->addEventHandler(_keyboardHandler);
+//
+////    _viewer->setCameraManipulator(new CustomFirstPersonManipulator);
+//    _mainCamera->setUpdateCallback(new CameraUpdateCallback(_mainCamera));
+//    
+//    _viewer->run();
+//}
 }
 
 void Core::configGeometries()
@@ -468,36 +487,40 @@ void Core::setupHUDForPasses()
                              //_impPass->getImportanceSampleTexture(0),
                              //_geomPass->getNormalDepthOutTexture(),
                              //_geomPass->getNormalDepthOutTexture(),
-                             _ssaoPass->getSSAOOutTexture(),
+                             //_ssaoPass->getSSAOOutTexture(),
                              ///_impPass->getFluxMipMapTexture(),
                              //_indLPass->getIndirectLightingTex(),
                              //_geomPass->getNormalDepthOutTexture(),
-                             _winWidth, _winHeight, 0.3333, 0.3, true);
+                             _geomPass->getSharedDepthStencilTexture(),
+                             _winWidth, _winHeight, 0.3333, 0.3, false);
     
     osg::ref_ptr<osg::Camera> qTexD =
     createTextureDisplayQuad(osg::Vec3(0.3333, 0.7, 0),
                              //_shadowGroup->getDirLightViewWorldPosTexture(0),
-                             //_shadowGroup->getDirLightDirFluxTexture(0),
+                             _shadowGroup->getDirLightDirFluxTexture(0),
                              //_shadowGroup->getDirLightShadowTexture(0),
-                             _indLPass->getOutputTexture(0),
+                             //_indLPass->getOutputTexture(0),
                              //_hdrPass->getOutputTexture(0),
                              //_ssaoPass->getOutputTexture(0),
                              //_geomPass->getPositionOutTexure(),
+                             //_directionalLightPass->getOutputTexture(0),
+                             //_geomPass->getNormalDepthOutTexture(),
                              //_geomPass->getSharedDepthStencilTexture(),
                              //_impPass->getPossiowTexture(),
                              //_impPass->getImportanceSampleTexture(0),
-                             //_shadowGroup->getDirLightPosFluxTexture(0),
                              _winWidth, _winHeight, 0.3333, 0.3, true);
     
     osg::ref_ptr<osg::Camera> qTexP =
     createTextureDisplayQuad(osg::Vec3(0.6666, 0.7, 0),
-                             _directionalLightPass->getLightingOutTexture(),
+                             //_directionalLightPass->getLightingOutTexture(),
                              //_geomPass->getNormalDepthOutTexture(),
+                             //_shadowGroup->getDirLightShadowTexture(0),
                              //_shadowGroup->getDirLightDirFluxTexture(0),
                              //_ssaoPass->getSSAOOutTexture(),
                              //_indLPass->getIndirectLightingTex(),
+                             _impPass->getImportanceSampleTexture(0),
                              //_shadowGroup->getDirLightDirFluxTexture(0),
-                             _winWidth, _winHeight, 0.3333, 0.3, true);
+                             _winWidth, _winHeight, 0.3333, 0.3, false);
     
     osg::ref_ptr<osg::Camera> qTexF =
     createTextureDisplayQuad(osg::Vec3(0.0, 0.0, 0),
@@ -545,6 +568,36 @@ void Core::configPasses()
     _screenPasses.push_back(_pointLightPass);
     _screenPasses.push_back(_finalPass);
     _screenPasses.push_back(_hdrPass);
+}
+
+void Core::addExternalHUD(osg::ref_ptr<osg::Node> hud)
+{
+    if(_externalHUDs == NULL && _externalHUDBlending == NULL)
+    {
+        // config hud & final pass blending group
+        _externalHUDBlending = new osg::Group;
+        osg::ref_ptr<osg::StateSet> ss = _externalHUDBlending->getOrCreateStateSet();
+        
+        osg::ref_ptr<osg::BlendFunc> blendFunc(new osg::BlendFunc);
+        osg::ref_ptr<osg::BlendEquation> blendEquation(new osg::BlendEquation);
+        blendFunc->setFunction(GL_ONE, GL_ONE);
+        blendEquation->setEquation(osg::BlendEquation::FUNC_ADD);
+        
+        // disable depth test for blending
+        ss->setMode( GL_DEPTH_TEST, osg::StateAttribute::OFF );
+        
+        // enable blending
+        ss->setMode(GL_BLEND, osg::StateAttribute::ON);
+        ss->setAttributeAndModes(blendFunc, osg::StateAttribute::ON);
+        ss->setAttributeAndModes(blendEquation, osg::StateAttribute::ON);
+        
+        _externalHUDs = new osg::Group;
+        _sceneRoot->addChild(_externalHUDBlending);
+    }
+    else
+    {
+        _externalHUDs->addChild(hud);
+    }
 }
 
 void Core::freeHeap()

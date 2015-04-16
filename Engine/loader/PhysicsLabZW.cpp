@@ -46,7 +46,13 @@ bool PhysicsLabZW::init()
     configTrackball();
     
     cvr::PluginHelper::getScene()->addChild(_core->getSceneRoot());
-    
+//    osg::ref_ptr<osg::Box> _box(new osg::Box);
+//    osg::ref_ptr<osg::ShapeDrawable> sd = new osg::ShapeDrawable;
+//    sd->setShape(_box);
+//    osg::ref_ptr<osg::Geode> geode = new osg::Geode;
+//    geode->addDrawable(sd);
+    //cvr::PluginHelper::getScene()->addChild(geode);
+//
     return true;
 }
 

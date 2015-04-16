@@ -14,7 +14,6 @@ uniform mat4 u_inv_viewMat;
 uniform mat4 u_projMat;
 
 varying vec4 v_world;
-
 //varying vec4 ras;
 
 // built-in

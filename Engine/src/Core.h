@@ -67,6 +67,49 @@ public:
         return _viewer;
     }
     
+    void setCustomViewer(osgViewer::Viewer *viewer);
+    
+    inline void setCustomMainCamera(osg::ref_ptr<osg::Camera> mainCamera)
+    {
+        _hasCustomCamera = true;
+        _mainCamera = mainCamera;
+    }
+    
+    inline osg::ref_ptr<osg::Group> getSceneRoot()
+    {
+        return _sceneRoot;
+    }
+    
+    inline osg::ref_ptr<osg::Group> getDebugHUD()
+    {
+        return _debugHUD;
+    }
+    
+    inline void enableDebugHUD()
+    {
+        if(!_debugHUDEnabled)
+        {
+            _sceneRoot->addChild(_debugHUD);
+            _debugHUDEnabled = true;
+        }
+    }
+    
+    inline void disableDebugHUD()
+    {
+        if(_debugHUDEnabled)
+        {
+            _sceneRoot->removeChild(_debugHUD);
+            _debugHUDEnabled = false;
+        }
+    }
+    
+    inline void toggleDebugHUD()
+    {
+        _debugHUDEnabled ? disableDebugHUD() : enableDebugHUD();
+    }
+    
+    void addExternalHUD(osg::ref_ptr<osg::Node> hud);
+    
     void run();
     
 private:
@@ -158,6 +201,14 @@ private:
     osg::ComputeBoundsVisitor _computeBound;
     osg::BoundingBox _sceneAABB;
     
+    bool _hasCustomViewer;
+    bool _hasCustomCamera;
+    
+    bool _debugHUDEnabled;
+    
+    osg::ref_ptr<osg::Group> _externalHUDs;
+    osg::ref_ptr<osg::Group> _externalHUDBlending; // blend with final pass
+    
 };
 
 class CameraUpdateCallback : public osg::NodeCallback
@@ -168,6 +219,8 @@ public:
     
 private:
     osg::ref_ptr<osg::Camera> _mainCamera;
+    
+    
 };
 
 #endif /* defined(__vrphysics__Core__) */

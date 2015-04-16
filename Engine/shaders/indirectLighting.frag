@@ -124,7 +124,7 @@ void impl1()
 //    
 //        Fij *= fadeOutFactor;
 
-    vec4 result = v_lightFlux * Fij;								// transfer energy!
+    vec4 result = v_lightFlux * Fij;
     
     gl_FragColor = result;
 }
@@ -165,7 +165,7 @@ void visualizeVPLFlux()
 
 void main()
 {
-     impl1();
+    impl1();
     // visualizeVPLPos();
     // visualizeVPLFlux();
 }

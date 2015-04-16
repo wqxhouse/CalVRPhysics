@@ -30,7 +30,7 @@ GeometryPass::GeometryPass(osg::Camera *mainCamera, AssetDB *assetDB, osg::Group
     _rttCamera->attach(osg::Camera::COLOR_BUFFER0, getAlbedoOutTexture());
     _rttCamera->attach(osg::Camera::COLOR_BUFFER1, getNormalDepthOutTexture());
     _rttCamera->attach(osg::Camera::COLOR_BUFFER2, getPositionOutTexure());
-    
+   
     configSharedDepthStencilTexture();
     _rttCamera->attach(osg::Camera::PACKED_DEPTH_STENCIL_BUFFER, _sharedDepthStencilTex);
     
@@ -43,7 +43,7 @@ GeometryPass::GeometryPass(osg::Camera *mainCamera, AssetDB *assetDB, osg::Group
     //    depth->setZNear(0.0);
     //    depth->setZFar(1.0);
     worldObjectGeomPassSS->setAttributeAndModes(depth, osg::StateAttribute::ON);
-    
+   
     _rttCamera->addChild(worldObjectGeomPassNode);
     
     _rootGroup->addChild(_rttCamera);

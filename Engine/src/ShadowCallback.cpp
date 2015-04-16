@@ -78,6 +78,7 @@ void ShadowCallback::makeGlobalShadowMatrix(osg::Matrixd &shadowOrthoMat, osg::M
     FrustumData fdata;
 
     fdata.updateMatrix(&_mainCamera->getViewMatrix(), &_mainCamera->getProjectionMatrix());
+    // Utils::print(_mainCamera->getViewMatrix());
     
     osg::Vec3 ws_viewFrustumCentroid = fdata.getCenter();
     osg::Vec3 ws_lightDir = _dirLight->getPosition() - _dirLight->getLookAt();

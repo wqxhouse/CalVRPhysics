@@ -199,5 +199,6 @@ void main(void)
     
     float depth = sampleShadowMap(vertex);
     vec4 final_color = depth * u_lightDiffuse * (diffuse + specular);
+    //final_color = vec4(linearDepth);
     gl_FragColor = vec4(final_color.rgb, 1.0);
 }

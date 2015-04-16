@@ -36,7 +36,7 @@ SSAOPass::SSAOPass(osg::Camera *mainCamera, osg::TextureRectangle *positionTex, 
    
     _sharedDepthTex = sharedDepthTex;
     configureStateSet();
-    setupBlurCamera();
+    //setupBlurCamera();
 }
 
 SSAOPass::~SSAOPass()

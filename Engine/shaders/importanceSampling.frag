@@ -140,7 +140,7 @@ void main()
 #endif
     
     gl_FragColor = vec4( sampleLocation, 0 );
-    
+    // gl_FragColor = vec4(1, 0, 1, 1);
     
 
     
@@ -151,3 +151,4 @@ void main()
 //    gl_FragColor = vv;
 //    gl_FragColor = vec4(0, 1, 1, 1);
 }
+

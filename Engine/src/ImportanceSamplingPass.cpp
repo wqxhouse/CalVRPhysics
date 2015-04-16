@@ -17,7 +17,7 @@
 #include "DirectionalLightGroup.h"
 
 ImportanceSamplingPass::ImportanceSamplingPass(osg::Camera *mainCamera, ShadowGroup *sg, DirectionalLightGroup *dlg)
-: ScreenPass(mainCamera), _shadowGroup(sg), _dirLightGroup(dlg), _impSampleEnabled(true), _splatsSize(0)
+: ScreenPass(mainCamera), _shadowGroup(sg), _dirLightGroup(dlg), _impSampleEnabled(false), _splatsSize(0)
 {
     _rsmWidth = sg->getRsmWidth();
     _rsmHeight = sg->getRsmHeight();
@@ -114,7 +114,7 @@ void ImportanceSamplingPass::addImportanceSampleCamera(osg::Texture2D *mipMapIn,
     cam->addChild(_screenQuad);
     // cam->addChild(_debugPoints);
     
-    cam->setClearColor(osg::Vec4(1, 1, 1, 1));
+    cam->setClearColor(osg::Vec4(1, 0, 1, 1));
     cam->setClearMask(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     cam->setRenderTargetImplementation(osg::Camera::FRAME_BUFFER_OBJECT);
     cam->setRenderOrder(osg::Camera::PRE_RENDER);
@@ -126,6 +126,7 @@ void ImportanceSamplingPass::addImportanceSampleCamera(osg::Texture2D *mipMapIn,
     cam->setViewport(0, 0, _splatsSize, _splatsSize);
     
     cam->attach(osg::Camera::COLOR_BUFFER0, outTex);
+    
     _importanceSampleCameraGroup->addChild(cam);
     
     // set stateset
@@ -280,8 +281,6 @@ void ImportanceSamplingPass::generatePoissonTexture()
             *data = v;
         }
     }
-    osg::ref_ptr<osg::Image> _test(new osg::Image);
-    _test = osgDB::readImageFile("tablewood.jpg");
     
     _poissowTex = new osg::Texture2D;
     _poissowTex->setSourceFormat(GL_FLOAT);

@@ -15,6 +15,7 @@ varying vec4 ras;
 void main(void)
 {
     gl_FragData[0] = v_color;
+//    gl_FragData[0] = vec4(0, 0, 0, 1);
     gl_FragData[1] = vec4(normalize(v_normal), v_depth); // normals + depth
     gl_FragData[2] = vec4(v_position.xyz, 0);
 //    vec4 rr = ras / ras.w;
