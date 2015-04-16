@@ -1,8 +1,6 @@
 // ssao vertex shader
 #version 120
 
-uniform mat4 u_inverseProjMatrix;
-
 varying vec3 v_vertex;
 varying vec2 v_texCoord;
 

@@ -36,7 +36,7 @@ SSAOPass::SSAOPass(osg::Camera *mainCamera, osg::TextureRectangle *positionTex, 
    
     _sharedDepthTex = sharedDepthTex;
     configureStateSet();
-    //setupBlurCamera();
+    setupBlurCamera();
 }
 
 SSAOPass::~SSAOPass()
@@ -127,7 +127,9 @@ void SSAOPass::configRTTCamera()
     _rttCamera->addChild(_screenQuad);
     _rttCamera->setClearColor(osg::Vec4(0, 0, 0, 1));
     _rttCamera->setClearMask(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    _rttCamera->attach(osg::Camera::COLOR_BUFFER0, getOutputTexture(_out_ssao_tex_id));
+    _rttCamera->attach(osg::Camera::COLOR_BUFFER, getOutputTexture(_out_ssao_tex_id));
+    
+    addOutTexture();
     
     _rootGroup->addChild(_rttCamera);
 }

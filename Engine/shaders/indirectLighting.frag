@@ -129,7 +129,6 @@ void impl1()
     gl_FragColor = result;
 }
 
-
 void visualizeVPLPos()
 {
 //    gl_FragColor = vec4(0.2, 0.2, 0.2, 0.2);

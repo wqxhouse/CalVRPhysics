@@ -17,7 +17,7 @@
 #include "DirectionalLightGroup.h"
 
 ImportanceSamplingPass::ImportanceSamplingPass(osg::Camera *mainCamera, ShadowGroup *sg, DirectionalLightGroup *dlg)
-: ScreenPass(mainCamera), _shadowGroup(sg), _dirLightGroup(dlg), _impSampleEnabled(false), _splatsSize(0)
+: ScreenPass(mainCamera), _shadowGroup(sg), _dirLightGroup(dlg), _impSampleEnabled(true), _splatsSize(0)
 {
     _rsmWidth = sg->getRsmWidth();
     _rsmHeight = sg->getRsmHeight();

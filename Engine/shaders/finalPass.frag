@@ -46,8 +46,7 @@ void main(void)
     lightContribution += indirectLightContribution;
     
 //    vec4 final_color = (ambient * ssaoContribution + lightContribution) * albedo;
-    vec4 final_color = ( ambient + vec4(lightContribution.rgb, 1) ) * albedo;
-//    vec4 final_color = ( ambient + vec4(lightContribution.rgb, 1) ) * albedo * ssaoContribution;
+    vec4 final_color = ( ambient + vec4(lightContribution.rgb, 1) ) * albedo * ssaoContribution;
  
     // gamma correction
 //    final_color.rgb = pow(final_color.rgb, vec3(1.0f / 2.2f));

@@ -53,10 +53,16 @@ osg::ref_ptr<osg::Group> ScreenPass::createTexturedQuad()
     
     osg::ref_ptr<osg::Vec3Array> quad_coords = new osg::Vec3Array; // vertex coords
     // counter-clockwise
-    quad_coords->push_back(osg::Vec3d(0, 0, -1));
-    quad_coords->push_back(osg::Vec3d(1, 0, -1));
-    quad_coords->push_back(osg::Vec3d(1, 1, -1));
-    quad_coords->push_back(osg::Vec3d(0, 1, -1));
+//    quad_coords->push_back(osg::Vec3d(0, 0, -1));
+//    quad_coords->push_back(osg::Vec3d(1, 0, -1));
+//    quad_coords->push_back(osg::Vec3d(1, 1, -1));
+//    quad_coords->push_back(osg::Vec3d(0, 1, -1));
+    // this fix ssao not drawing anything in calvr
+      quad_coords->push_back(osg::Vec3d(0, 0, 0));
+      quad_coords->push_back(osg::Vec3d(1, 0, 0));
+      quad_coords->push_back(osg::Vec3d(1, 1, 0));
+      quad_coords->push_back(osg::Vec3d(0, 1, 0));
+    
     
     osg::ref_ptr<osg::Vec2Array> quad_tcoords = new osg::Vec2Array; // texture coords
     quad_tcoords->push_back(osg::Vec2(0, 0));

@@ -497,7 +497,7 @@ void Core::setupHUDForPasses()
     osg::ref_ptr<osg::Camera> qTexD =
     createTextureDisplayQuad(osg::Vec3(0.3333, 0.7, 0),
                              //_shadowGroup->getDirLightViewWorldPosTexture(0),
-                             _shadowGroup->getDirLightDirFluxTexture(0),
+                             //_shadowGroup->getDirLightDirFluxTexture(0),
                              //_shadowGroup->getDirLightShadowTexture(0),
                              //_indLPass->getOutputTexture(0),
                              //_hdrPass->getOutputTexture(0),
@@ -507,8 +507,8 @@ void Core::setupHUDForPasses()
                              //_geomPass->getNormalDepthOutTexture(),
                              //_geomPass->getSharedDepthStencilTexture(),
                              //_impPass->getPossiowTexture(),
-                             //_impPass->getImportanceSampleTexture(0),
-                             _winWidth, _winHeight, 0.3333, 0.3, true);
+                             _impPass->getImportanceSampleTexture(0),
+                             _winWidth, _winHeight, 0.3333, 0.3, false);
     
     osg::ref_ptr<osg::Camera> qTexP =
     createTextureDisplayQuad(osg::Vec3(0.6666, 0.7, 0),
@@ -516,11 +516,11 @@ void Core::setupHUDForPasses()
                              //_geomPass->getNormalDepthOutTexture(),
                              //_shadowGroup->getDirLightShadowTexture(0),
                              //_shadowGroup->getDirLightDirFluxTexture(0),
-                             //_ssaoPass->getSSAOOutTexture(),
+                             _ssaoPass->getOutputTexture(0),
                              //_indLPass->getIndirectLightingTex(),
-                             _impPass->getImportanceSampleTexture(0),
+                             //_impPass->getImportanceSampleTexture(0),
                              //_shadowGroup->getDirLightDirFluxTexture(0),
-                             _winWidth, _winHeight, 0.3333, 0.3, false);
+                             _winWidth, _winHeight, 0.3333, 0.3, true);
     
     osg::ref_ptr<osg::Camera> qTexF =
     createTextureDisplayQuad(osg::Vec3(0.0, 0.0, 0),
