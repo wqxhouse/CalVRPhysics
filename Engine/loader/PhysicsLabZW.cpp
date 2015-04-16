@@ -12,6 +12,7 @@
 #include <cvrConfig/ConfigManager.h>
 #include <cvrKernel/SceneObject.h>
 #include <osgGA/TrackballManipulator>
+#include <osgDB/FileUtils>
 
 #include "../src/Utils.h"
 #include "Scene.h"
@@ -38,6 +39,7 @@ PhysicsLabZW::~PhysicsLabZW()
 
 bool PhysicsLabZW::init()
 {
+    configFilePath();
     configMenuBoard();
     configMainCamera();
     configEngineCore();
@@ -93,6 +95,18 @@ void PhysicsLabZW::configMenuBoard()
     _mainMenu = new cvr::SubMenu("PhysicsLabZW", "PhysicsLabZW");
     _mainMenu->setCallback(this);
     cvr::MenuSystem::instance()->addMenuItem(_mainMenu);
+}
+
+void PhysicsLabZW::configFilePath()
+{
+    osgDB::FilePathList& filePaths = osgDB::getDataFilePathList();
+    std::string resourcePath = cvr::ConfigManager::getEntry("value", "Plugin.vrphysics.ResourcePath", ".");
+    std::string shaderPath = cvr::ConfigManager::getEntry("value", "Plugin.vrphysics.ShaderPath", ".");
+    std::string assetsPath = cvr::ConfigManager::getEntry("value", "Plugin.vrphysics.AssetsPath", ".");
+    
+    filePaths.push_back(resourcePath);
+    filePaths.push_back(shaderPath);
+    filePaths.push_back(assetsPath);
 }
 
 void PhysicsLabZW::configEngineCore()

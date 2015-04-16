@@ -10,7 +10,7 @@
 
 void Scene::setupSceneGeometries(const osg::ref_ptr<osg::Group> geoms, Assets *const asset)
 {
-   asset->addGeometryWithFile("Testing/gi_test.dae");
+   asset->addGeometryWithFile("gi_test.dae");
 }
 
 void Scene::setupDirectionalLights(DirectionalLightGroup *const dirLightGroup)

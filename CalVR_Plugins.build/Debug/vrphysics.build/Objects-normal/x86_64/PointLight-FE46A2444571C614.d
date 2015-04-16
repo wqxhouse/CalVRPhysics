@@ -132,4 +132,7 @@ dependencies: \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/DataTypes \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/OutputStream \
   /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/SharedStateManager \
-  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/ImageProcessor
+  /Users/Wqxhouse-Mac/vrproject/OpenSceneGraph-3.2.1/include/osgDB/ImageProcessor \
+  /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrConfig/ConfigManager.h \
+  /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrConfig/Export.h \
+  /Users/Wqxhouse-Mac/vrproject/calvr/include/cvrConfig/ConfigFileReader.h

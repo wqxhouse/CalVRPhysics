@@ -55,6 +55,7 @@ private:
     void configTrackball();
     void configMenuBoard();
     void configEngineCore();
+    void configFilePath();
     
     Core *_core;
     bool _coreEngineEnabled;

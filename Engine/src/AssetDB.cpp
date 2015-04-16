@@ -36,7 +36,7 @@ void AssetDB::addGeometryWithFile(const std::string &fileURL)
     osg::ref_ptr<osg::Node> loadedModel = osgDB::readNodeFile(fileURL);
     if(loadedModel == NULL)
     {
-        fprintf(stderr, "load model %s failed", fileURL.c_str());
+        fprintf(stderr, "load model %s failed\n", fileURL.c_str());
         return;
     }
     if(loadedModel->getName() == "")

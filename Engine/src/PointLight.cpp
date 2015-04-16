@@ -8,10 +8,17 @@
 
 #include "PointLight.h"
 #include <osgDB/ReadFile>
+#include <cvrConfig/ConfigManager.h>
 
 PointLight::PointLight() :
 intensity(1.0f), _animated(false)
 {
+    // init path for calvr
+    if(_s_lightSphere == NULL)
+    {
+        _s_lightSphere = osgDB::readNodeFile("lightSphere.obj")->asGroup()->getChild(0)->asGeode();
+    }
+    
     genGeometry();
     
     memset(ambient, 0, sizeof(ambient));
@@ -65,4 +72,6 @@ float PointLight::calcRadiusByAttenuation()
 }
 
 int PointLight::_highest_id;
-osg::ref_ptr<osg::Geode> PointLight::_s_lightSphere = osgDB::readNodeFile("lightSphere.obj")->asGroup()->getChild(0)->asGeode();
+
+//osg::ref_ptr<osg::Geode> PointLight::_s_lightSphere = osgDB::readNodeFile("lightSphere.obj")->asGroup()->getChild(0)->asGeode();
+osg::ref_ptr<osg::Geode> PointLight::_s_lightSphere = NULL;
