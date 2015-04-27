@@ -1,5 +1,6 @@
 // final pass fragment shader
 #version 120
+#extension GL_ARB_texture_rectangle : enable
 
 // deferred g buffers
 uniform sampler2DRect u_albedoTex;  // albedo (diffuse without lighting)

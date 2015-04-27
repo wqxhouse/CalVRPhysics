@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<WindowConfig>
+  <Window width="2560" pipeIndex="0" height="1600" left="0" bottom="0" name="0" />
+</WindowConfig>
+
+<Plugin>
+    <MenuBasics value="on" />
+    <PhysicsLabZW value="off" />
+    <PhysicsLab value="off" />
+    <PhysicsLabNew value="off" />
+    <PhysicsLabNewOriginal value="off" />
+    <ModelLoader value="off" />
+    <LatestPhysics value="off" />
+    <LatestZW value="on" />
+    <LatestZW>
+	<ResourcePath value="/home/zowu/CVRPlugins/calit2/LatestZW/Engine/resources" />
+	<ShaderPath value="/home/zowu/CVRPlugins/calit2/LatestZW/Engine/shaders" />
+	<AssetsPath value="/home/zowu/CVRPlugins/calit2/LatestZW/Engine/assets" />
+    </LatestZW>
+</Plugin>
+
+<!--<ViewerPosition x="0" y="-1000" z="0" />-->
+<!--
+<NumScreens value="1" />
+<ScreenConfig>
+ <Screen width="800" height="600" originX="0" originY="0" originZ="0" h="0.0" p="0.0" r="0.0" name="0" />
+</ScreenConfig>
+
+<Input>
+ <Threaded FPS="60.0" />
+ <TrackingSystem0 value="MOUSE">
+  <Offset x="0" y="0" z="0" />
+  <Orientation h="0" p="0" r="0" />
+  <NumBodies value="1" />
+  <NumButtons value="3" />
+  <NumValuators value="0" />
+  <Body0>
+   <Offset x="0" y="0" z="0" />
+   <Orientation h="0" p="0" r="0" />
+  </Body0>
+ </TrackingSystem0>
+ <NumHeads value="0" />
+ <NumHands value="1" />
+ <Hand0>
+  <Address system="0" body="0" />
+  <ButtonMask system0="0xFF" />
+ </Hand0>
+</Input>
+
+<MenuSystem type="BOARDMENU">
+ <BoardMenu>
+  <Position distance="800" />
+  <Scale value="1.0" />
+  <Buttons select="0" open="1" />
+  <Trigger value="DOUBLECLICK" />
+ </BoardMenu>
+</MenuSystem>
+
+
+<Near value="1"/>
+<Far value="10000" />
+-->
+

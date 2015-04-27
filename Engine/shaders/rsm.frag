@@ -1,6 +1,7 @@
 // orthoDepthMap.frag
 
 #version 120
+#extension GL_ARB_texture_rectangle : enable
 
 varying float v_depth;
 varying vec4 v_color;

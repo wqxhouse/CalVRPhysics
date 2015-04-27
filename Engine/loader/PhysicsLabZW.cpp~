@@ -103,10 +103,6 @@ void PhysicsLabZW::configFilePath()
     std::string resourcePath = cvr::ConfigManager::getEntry("value", "Plugin.LatestZW.ResourcePath", ".");
     std::string shaderPath = cvr::ConfigManager::getEntry("value", "Plugin.LatestZW.ShaderPath", ".");
     std::string assetsPath = cvr::ConfigManager::getEntry("value", "Plugin.LatestZW.AssetsPath", ".");
-
- std::cout<< resourcePath << std::endl;
- std::cout<< shaderPath << std::endl;
- std::cout<< assetsPath << std::endl;
     
     filePaths.push_back(resourcePath);
     filePaths.push_back(shaderPath);

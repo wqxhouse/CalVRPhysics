@@ -109,7 +109,7 @@ public:
         quad_geom->addPrimitiveSet(quad_da.get());
         quad_geom->setColorArray(quad_colors.get(), osg::Array::BIND_OVERALL);
         
-        auto stateSet = quad_geom->getOrCreateStateSet();
+        osg::StateSet *stateSet = quad_geom->getOrCreateStateSet();
         stateSet->setMode(GL_LIGHTING, osg::StateAttribute::OFF);
         quad_geode->addDrawable(quad_geom);
         _renderQuad = quad_geode;

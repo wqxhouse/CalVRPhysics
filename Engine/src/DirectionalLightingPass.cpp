@@ -62,7 +62,7 @@ void DirectionalLightingPass::configureStateSet()
     osg::ref_ptr<osg::Group> lightPassGroup(new osg::Group);
     _lightPassGroupNode = lightPassGroup;
     
-    auto directionalLights = _lightGroup->getDirectionalLightsReference();
+    std::vector<DirectionalLight *> &directionalLights = _lightGroup->getDirectionalLightsReference();
     osg::Matrix mainCameraModelViewMatrix = _mainCamera->getViewMatrix();
     
     osg::ref_ptr<osg::BlendFunc> blendFunc(new osg::BlendFunc);
@@ -77,10 +77,10 @@ void DirectionalLightingPass::configureStateSet()
         osg::Vec3f lightDir = lightPosInViewSpace - lookAtInViewSpace;
         
         (*it)->genRenderQuad(_mainCamera->getViewport()->width(), _mainCamera->getViewport()->height());
-        auto renderQuad = (*it)->_renderQuad;
+        osg::ref_ptr<osg::Geode> renderQuad = (*it)->_renderQuad;
         lightPassGroup->addChild(renderQuad);
         
-        auto ss = renderQuad->getOrCreateStateSet();
+        osg::ref_ptr<osg::StateSet> ss = renderQuad->getOrCreateStateSet();
         ss->setUpdateCallback(new DirectionalLightCallback(_mainCamera, (*it)));
         ss->setMode( GL_DEPTH_TEST, osg::StateAttribute::OFF );
         

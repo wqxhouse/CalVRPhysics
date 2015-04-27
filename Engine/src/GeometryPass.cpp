@@ -36,7 +36,7 @@ GeometryPass::GeometryPass(osg::Camera *mainCamera, AssetDB *assetDB, osg::Group
     
     osg::ref_ptr<osg::Group> worldObjectGeomPassNode(new osg::Group);
     worldObjectGeomPassNode->addChild(_geomRootNode);
-    auto worldObjectGeomPassSS = worldObjectGeomPassNode->getOrCreateStateSet();
+    osg::ref_ptr<osg::StateSet> worldObjectGeomPassSS = worldObjectGeomPassNode->getOrCreateStateSet();
     worldObjectGeomPassSS->setMode(GL_DEPTH_TEST, osg::StateAttribute::ON);
     osg::ref_ptr<osg::Depth> depth(new osg::Depth);
     depth->setWriteMask(true);
@@ -78,10 +78,10 @@ void GeometryPass::configureStateSet()
     
     // attach shader to objects other than light geom
     // TODO: consider the shading of the flying light object, currently overriden by _stateSet
-    auto nodeMaterialPairs = _assetDB->getGeometryNodesAndMaterials();
+    std::vector<std::pair<osg::Node *, Material *> > nodeMaterialPairs = _assetDB->getGeometryNodesAndMaterials();
     for(unsigned long i = 0; i < nodeMaterialPairs.size(); i++)
     {
-        auto p = nodeMaterialPairs[i];
+        std::pair<osg::Node *, Material *> p = nodeMaterialPairs[i];
         osg::Node *node = p.first;
         Material *mat = p.second;
         if(mat->hasTexture())

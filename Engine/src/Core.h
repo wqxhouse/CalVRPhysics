@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <osgDB/ReadFile>
-#include <osgViewer/viewer>
+#include <osgViewer/Viewer>
 #include <osg/Camera>
 #include <osg/PolygonMode>
 #include <osg/TextureCubeMap>

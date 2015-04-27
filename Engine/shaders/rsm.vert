@@ -1,6 +1,7 @@
 // orthoDepthMap.vert
 
 #version 120
+#extension GL_ARB_texture_rectangle : enable
 
 uniform mat4 u_lightViewInverseMatrix;
 

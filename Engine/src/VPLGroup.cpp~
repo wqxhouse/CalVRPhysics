@@ -22,7 +22,6 @@ VPLGroup::VPLGroup()
     _lowerThreshold = 0.15;
     
     osg::ref_ptr<osg::Node> loadedSphere = osgDB::readNodeFile("lightSphere.obj");
-    std::cout << loadedSphere << std::endl;
 
     _lightSphere = loadedSphere->asGroup()->getChild(0)->asGeode();
     

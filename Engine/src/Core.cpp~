@@ -11,7 +11,7 @@
 #include "LightTrackBallManipulator.h"
 #include "Utils.h"
 
-// #include "Skybox.h"
+#include "Skybox.h"
 
 #include <osg/BlendFunc>
 #include <osg/BlendEquation>
@@ -198,37 +198,37 @@ void Core::configGeometries()
     _geometryGroup->accept(_computeBound);
     _sceneAABB = _computeBound.getBoundingBox();
     
-    //osg::ref_ptr<osg::Geode> geode = new osg::Geode;
-    //geode->addDrawable(
-    //        new osg::ShapeDrawable(
-    //        new osg::Sphere(osg::Vec3(), _geometryGroup->getBound().radius())) );
+    osg::ref_ptr<osg::Geode> geode = new osg::Geode;
+    geode->addDrawable(
+            new osg::ShapeDrawable(
+            new osg::Sphere(osg::Vec3(), _geometryGroup->getBound().radius())) );
     
-    //geode->setCullingActive( false );
-    //geode->getOrCreateStateSet()->setMode(GL_CULL_FACE, osg::StateAttribute::OFF);
+    geode->setCullingActive( false );
+    geode->getOrCreateStateSet()->setMode(GL_CULL_FACE, osg::StateAttribute::OFF);
     
-    //osg::ref_ptr<osg::TextureCubeMap> cubemap = new osg::TextureCubeMap;
-    //cubemap->setImage( osg::TextureCubeMap::POSITIVE_X, osgDB::readImageFile("east.png") );
-    //cubemap->setImage( osg::TextureCubeMap::NEGATIVE_X, osgDB::readImageFile("west.png") );
-    //cubemap->setImage( osg::TextureCubeMap::POSITIVE_Y, osgDB::readImageFile("down.png") );
-    //cubemap->setImage( osg::TextureCubeMap::NEGATIVE_Y, osgDB::readImageFile("up.png") );
-    //cubemap->setImage( osg::TextureCubeMap::POSITIVE_Z, osgDB::readImageFile("north.png"));
-    //cubemap->setImage( osg::TextureCubeMap::NEGATIVE_Z, osgDB::readImageFile("south.png") );
+    osg::ref_ptr<osg::TextureCubeMap> cubemap = new osg::TextureCubeMap;
+    cubemap->setImage( osg::TextureCubeMap::POSITIVE_X, osgDB::readImageFile("east.png") );
+    cubemap->setImage( osg::TextureCubeMap::NEGATIVE_X, osgDB::readImageFile("west.png") );
+    cubemap->setImage( osg::TextureCubeMap::POSITIVE_Y, osgDB::readImageFile("down.png") );
+    cubemap->setImage( osg::TextureCubeMap::NEGATIVE_Y, osgDB::readImageFile("up.png") );
+    cubemap->setImage( osg::TextureCubeMap::POSITIVE_Z, osgDB::readImageFile("north.png"));
+    cubemap->setImage( osg::TextureCubeMap::NEGATIVE_Z, osgDB::readImageFile("south.png") );
     
-    //cubemap->setWrap( osg::Texture::WRAP_S, osg::Texture::CLAMP_TO_EDGE );
-    //cubemap->setWrap( osg::Texture::WRAP_T, osg::Texture::CLAMP_TO_EDGE );
-    //cubemap->setWrap( osg::Texture::WRAP_R, osg::Texture::CLAMP_TO_EDGE );
-    //cubemap->setFilter( osg::Texture::MIN_FILTER, osg::Texture::LINEAR_MIPMAP_LINEAR );
-    //cubemap->setFilter( osg::Texture::MAG_FILTER, osg::Texture::LINEAR );
-    //cubemap->setResizeNonPowerOfTwoHint( false );
+    cubemap->setWrap( osg::Texture::WRAP_S, osg::Texture::CLAMP_TO_EDGE );
+    cubemap->setWrap( osg::Texture::WRAP_T, osg::Texture::CLAMP_TO_EDGE );
+    cubemap->setWrap( osg::Texture::WRAP_R, osg::Texture::CLAMP_TO_EDGE );
+    cubemap->setFilter( osg::Texture::MIN_FILTER, osg::Texture::LINEAR_MIPMAP_LINEAR );
+    cubemap->setFilter( osg::Texture::MAG_FILTER, osg::Texture::LINEAR );
+    cubemap->setResizeNonPowerOfTwoHint( false );
     
-    //geode->getOrCreateStateSet()->setTextureAttributeAndModes( 0, cubemap.get() );
+    geode->getOrCreateStateSet()->setTextureAttributeAndModes( 0, cubemap.get() );
     // _geometryGroup->addChild(geode);
     
-    //SkyBox *skyBox = new SkyBox(_mainCamera); // TODO: free
-    //skyBox->setEnvironmentMap(
-    //              osgDB::readImageFile("east.png"), osgDB::readImageFile("west.png"),
-    //              osgDB::readImageFile("down.png"), osgDB::readImageFile("up.png"),
-    //              osgDB::readImageFile("north.png"), osgDB::readImageFile("south.png") );
+    SkyBox *skyBox = new SkyBox(_mainCamera); // TODO: free
+    skyBox->setEnvironmentMap(
+                  osgDB::readImageFile("east.png"), osgDB::readImageFile("west.png"),
+                  osgDB::readImageFile("down.png"), osgDB::readImageFile("up.png"),
+                  osgDB::readImageFile("north.png"), osgDB::readImageFile("south.png") );
     
     //_geometryGroup->addChild(skyBox->getRootNode());
     // _sceneRoot->addChild(skyBox->getRootNode());

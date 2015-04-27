@@ -332,7 +332,7 @@ void ImportanceSamplingPass::configDebugPoints()
     quad_geom->setVertexArray(pointCoords.get());
     quad_geom->addPrimitiveSet(quad_da.get());
     
-    auto _StateSet = quad_geom->getOrCreateStateSet();
+    osg::ref_ptr<osg::StateSet> _StateSet = quad_geom->getOrCreateStateSet();
     _StateSet->setMode(GL_LIGHTING, osg::StateAttribute::OFF);
     _StateSet->setAttribute( new osg::Point( 1.0f ), osg::StateAttribute::ON);
     
